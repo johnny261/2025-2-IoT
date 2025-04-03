@@ -13,6 +13,12 @@
 1. Lección 2 **A deeper dive into IoT** ([link](https://github.com/microsoft/IoT-For-Beginners/blob/main/1-getting-started/lessons/2-deeper-dive/README.md)) del curso de Microsoft **IoT for Beginners** [[link](https://github.com/microsoft/IoT-For-Beginners)]
 2. Lección 3 **Interact with the phisycal world** ([link](https://github.com/microsoft/IoT-For-Beginners/blob/main/1-getting-started/lessons/3-sensors-and-actuators/README.md)) del curso **IoT for Beginners** ([link](https://github.com/microsoft/IoT-For-Beginners)) de Microsoft.
 
+## 0. Configuración del Arduino IDE
+1. Ingrese este [enlace](https://www.arduino.cc/en/software) descargue e instale el software 
+2. Una vez instalado vaya a Archivo -> Preferencias -> Manejar tarjetas adicionales e insertar este enlace dentro del recuadro
+[https://espressif.github.io/arduino-esp32/package_esp32_index.json](https://espressif.github.io/arduino-esp32/package_esp32_index.json)
+Este paso es necesario para que el IDE reconozca las tarjetas desarrolladas para el ESP32.
+
 ## 1. Componentes basicos
 
 Dentro del contexto de Internet of Things (IoT), una "thing" se refiere a cualquier dispositivo físico que está conectado a la red y pueda interactuar con otros dispositivos, sistemas, o servicios. 
@@ -28,11 +34,11 @@ Vamos a tratar estos con un poco mas de detalle.
 
 Los **transductores** son los elemetos de la **cosa** que permiten la interación del dispositivo IoT con el ambiente; son el equivalente a los sentidos los seres vivos y los perifericos en los computadores.
 
-![sistema_electronico](sistema_electronico.png)
+![sistema_electronico](img/sistema_electronico.png)
 
 Por ejemplo, en la siguiente figura se muestra el diagrama de bloques de un sistema electronico que permite lanzar una alarma cuando la temperatura medida sobrepasa un valor determinado.
 
-![temperatura](sistema_electronico_ejemplo.png)
+![temperatura](img/sistema_electronico_ejemplo.png)
 
 A continuación, se va a tratar con mayor detalle cada uno de estos.
 
@@ -40,7 +46,7 @@ A continuación, se va a tratar con mayor detalle cada uno de estos.
 
 Un sensor es un tipo de transductor cuya función consiste transformar las señales del entorno (señales fisicas) en señales electricas las cuales son las entradas al sistema. La siguiente tabla, clasifica y resume algunos de los principales tipos de sensores:
 
-![lista_sensores](sensores_lista.png)
+![lista_sensores](img/sensores_lista.png)
 
 Exiten diversas clasificaciones para los sensores dependiendo de diferentes criterios como: El tipo de señal ambiental sensada y el tipo de señal electrica entre otros. A continuación se tratan algunos.
 
@@ -49,55 +55,55 @@ Exiten diversas clasificaciones para los sensores dependiendo de diferentes crit
 Los sensores permiten medir muchas cosas, desde propiedades naturales taltes como la temperatura del aire a interacciones fisicas como el movimiento. Algunos tipos de sensores existentes son:
 * **Sensores de temperatura**: Permiten medir la temperatura del aire o el medio en el cual se encuentran inmersos. A veces suelen venir cominados con sensores de humedad y presión en un mismo modulo.
   
-  ![temperatura](temperatura.png)
+  ![temperatura](img/temperatura.png)
 
 * **Botones**: Permiten sensar cuando estos son presionados.
   
-  ![botones](botones.png)
+  ![botones](img/botones.png)
   
 * **Sensores de luz**: Estos detectan niveles de luz. Tambien permiten medir distintos tipos de luz (de colores especificos, ultravioleta, infraroja o luz visible en general).
   
-  ![light](light.png)
+  ![light](img/light.png)
 
 * **Acelerometros**: Permiten medir el movimiento en multiples direcciones.
   
-  ![acelerometro](acelerometro.png)
+  ![acelerometro](img/acelerometro.png)
 
 
 * **Microfonos**: estos permiten detectar sonidos.
   
-  ![microfono](microfono.png)
+  ![microfono](img/microfono.png)
 
 **Tipos de sensores de acuerdo a la señal electrica**
 
 De acuerdo al tipo de señal electrica obtenida a la entrada, los sensores se pueden clasificar en dos tipos basicos:
 * **Sensores Analógicos**: Son el tipo de sensores mas basicos que existen. Estos sensores son alimentados con voltaje (voltaje de alimentación) desde el dispositivo IoT y devolvuelven (mediante el uso de un **ADC**) a este para su lectura, un voltaje cuya variación depende de la variable medida.
 
-  ![potenciometro](potentiometer.png) 
+  ![potenciometro](img/potentiometer.png) 
 
   A continuación se muestran algunos ejemplos de este tipo de sensores:
 
-  ![sensor_analogo](sensor_analogo.png)
+  ![sensor_analogo](img/sensor_analogo.png)
 
 * **Sensores Digitales**: Los sensores digitales detectan cambios de voltaje que solo pueden tomar dos posibles valores (**alto** y **bajo**). El tipo mas simple de sensor de este tipo es un **boton** o **switch**, el cual es un sensor con dos estados **ON** y **OFF**.
   
-  ![pulsador](button.png) 
+  ![pulsador](img/button.png) 
 
   Algunos ejemplos de este tipo de sensores, se muestran a continuación:
 
-  ![sensor_digital](sensor_digital.png)
+  ![sensor_digital](img/sensor_digital.png)
 
   Existen sensores digitales mas avanzados que tienen la capacidad de sensar variables analógicas gracias a que possen el hardware necesario para poder procesar la señal leida de modo tal, que pueden ser conectados directamente al dispositivo IoT. Un caso tipico de estos, consiste en los sensores de temperatura que vienen integrados con un ADC de modo que los valores analogos leidos son convertidos en señales digitales que se envian al dispositivo IoT como datos en forma serial.
 
-  ![serial](temperature-as-digital.png)
+  ![serial](img/temperature-as-digital.png)
 
   La siguiente figura muestra algunos tipos de estos sensores:
 
-  ![sensor_digital2](sensor_digital2.png)
+  ![sensor_digital2](img/sensor_digital2.png)
 
   En este tipo de sensores, el envio de los datos se realiza comunmente por medio de un protocolo serial. La siguiente lista resalta algunos de los mas comunmente usados:
 
-  ![protocolos_lista](protocolos.png)
+  ![protocolos_lista](img/protocolos.png)
 
   Dentro de los protocolos más comunmente usados para IoT se encuentran el: RS-232, I2C, el SPI y el One Wire, pero esos los veremos despues con mas detalle.
 
@@ -116,54 +122,54 @@ Los sensores pueden clasificarse en función de las necesidades de alimentación
 Los actuadores realizand la tarea opuesta a los sensores conviertiendo una señal electrica proveniente del dispositivo IoT en una señal ambiental cuyo fin es interactuar con el mundo fisico. Algunos actuadores comunes incluyen:
 * **Led**: Estos emiten luz cuando son encendidos.
   
-  ![leds.png](leds.png)
+  ![leds.png](img/leds.png)
 
 * **Altavoz**: Este elemento emite sonido basado en la señal que recibe, desde un buzzer basico a un parlante de audio puede ser empleado en la reproducción de musica.
   
-  ![speaker](speaker.png)
+  ![speaker](img/speaker.png)
 
 * **Motor**: Este convierte una señal electrica en una rotación definida.
   
-  ![motor](motor.png)
+  ![motor](img/motor.png)
 
 * **Relay**: Son swiches que pueden ser encendidos o apagados por medio de una señal electrica. Estos permiten que pequeños voltajes provenientes de dispositivos IoT puedan manejar altos voltajes.
   
-  ![realy](realy.png)
+  ![realy](img/realy.png)
 
 * **Pantallas**: Son uno de los actuadores mas completos y muesntran información en un display multi.segmentos. Los displays pueden variar desde display LED sencillos a monitores de video de alta resolución.
   
-  ![display](display.png)
+  ![display](img/display.png)
 
 **Tipos de actuadores de acuerdo a la señal electrica**
 
 Al igual que para el caso de los sensores, el tipo de señal electrica hace que estos se clasifiquen en:
 * **Actuadores analógicos**: Los actuadores analogicos toman una señal analoga y la convierten en alguna clase de interacción la cual esta basada en cambios del voltaje aplicado.
   
-  ![actuador_analogo](actuador_analogo.png)
+  ![actuador_analogo](img/actuador_analogo.png)
 
   Es importante tener en cuenta que asi como los sensores, los dispositivos IoT de la actualidad trabajan con señales digitales y no analogas; de modo que, para enviar una señal analoga, el dispositivo IoT necesita un conversor analogo digital (ADC) el cual puede estar integrado en el dispositivo IoT o adaptado a una placa externa que se conecta al dispositivo. El ADC convertira los 0s y 1s del dispositivo IoT a un voltaje analogo que el actuador pueda usar.
 
 * **Actuadores por modulación PWM**: A diferencia del uso de **ADCs**, otra forma de conversion de señales digitales a señales analogas es por medio de la **modulación PWM** lo cual involucra enviar una tren de pulsos los caules actuan como si fueran una señal analogica cuya amplitud, depende del ancho de los pulsos del tren. Un ejemplo tipico del uso de PWM econsiste en el control de la velocidad de un motor. Para este caso a mayor ancho del pulso de la onda cuadrada, mayor velocidad en el motor.
   
-  ![actuador_pwm](actuador_pwm.png)
+  ![actuador_pwm](img/actuador_pwm.png)
 
   La siguiente figura muestra algunos casos:
 
-  ![actuador_pwm2](actuador_pwm2.png)
+  ![actuador_pwm2](img/actuador_pwm2.png)
 
 * **Actuadores digitales**: De modo similar a los sensores digitales, los actuadores digitales, tienen dos estados que son controlados por un voltaje **alto** y uno **bajo** o tienen un ADC que les permite convertir una señal analoga en una digital. 
   
-  ![actuador_digital](actuador_digital.png)
+  ![actuador_digital](img/actuador_digital.png)
 
   Tal y como en el caso de los sensores, los actuadores digitales mas avanzados pueden involucrar protocolos de comunicación serial para la conexión con el sistem electrónico. 
 
-  ![actuador_digital2](actuador_digital2.png)
+  ![actuador_digital2](img/actuador_digital2.png)
 
 ## 2. Microcontroladores y microprocesadores
 
 Como se vió en la sesión anterior, los microcontroladores y los micropocesadores son el componente de la **cosa** (**thing**) encargados de la recolección y procesamiento de los datos del entorno y del desarrollo de las acciones de control.
 
-![sistemas_de_desarrollo](sistemas_de_desarrollo.png)
+![sistemas_de_desarrollo](img/sistemas_de_desarrollo.png)
 
 Para realizar labores de prototipado, se disponen de los elementos listados a continuación:
 
@@ -176,7 +182,7 @@ Para realizar labores de prototipado, se disponen de los elementos listados a co
 
 Estos permiten que el dispositivo IoT se conecte a la red y se comunique con otros dispositivos o servicios en la nube. Los módulos pueden ser Wi-Fi, Bluetooth, Zigbee, LoRa, entre otros.
 
-![modulos_conexion](modulos_conexion.png)
+![modulos_conexion](img/modulos_conexion.png)
 
 La siguiente tabla resume algunos de los principales modulos de acuerdo a la tecnologia:
 
@@ -203,7 +209,7 @@ La siguiente tabla resume algunos de los principales modulos de acuerdo a la tec
 Mediante los sensores y los actuadores es como la cosa interactua con el entorno (ambiente). Existen numerosos kits de iniciación en el mercado. En el laboratorio se disponen de los siguientes modulos:
 * **Grove - Starter Kit v3** [[link]](https://udea-iot.github.io/UdeA_IoT-page/docs/sensores-actuadores/inventario-lab#grove---starter-kit-v3)
   
-  ![kit_groove](Grove-Starter_Kit_v2.jpg)
+  ![kit_groove](img/Grove-Starter_Kit_v2.jpg)
 
   La siguiente tabla detalla la lista de componentes con la que cuenta este kit:
   
@@ -224,7 +230,7 @@ Mediante los sensores y los actuadores es como la cosa interactua con el entorno
 
 * **37 Sensor Kit - Elegoo** [[link]](https://udea-iot.github.io/UdeA_IoT-page/docs/sensores-actuadores/inventario-lab#37-sensor-kit---elegoo)
   
-  ![sensores_elegoo](sensores_elegoo.jpg)
+  ![sensores_elegoo](img/sensores_elegoo.jpg)
 
   La lista de elementos para este kit se describe a continuación:
 
@@ -273,7 +279,7 @@ Mediante los sensores y los actuadores es como la cosa interactua con el entorno
 
 * **Landzo 37 In 1 Sensors Kit For Arduino** [[link]](https://udea-iot.github.io/UdeA_IoT-page/docs/sensores-actuadores/inventario-lab#landzo-37-in-1-sensors-kit-for-arduino)
   
-  ![sensores_ladzo](sensores_ladzo.png)
+  ![sensores_ladzo](img/sensores_ladzo.png)
 
   La lista de modulos se describe a continuación:
 
@@ -424,19 +430,19 @@ A continuación se muestra el diagrama de pines (**pinout**) para el Arduino UNO
 
 * **Mapa de pines Arduino UNO**
   
-  ![arduino_uno_pinout](arduino_uno-pinout.png)
+  ![arduino_uno_pinout](img/arduino_uno-pinout.png)
 
 * **Mapa de pines ESP32**
 
-  ![esp32_pinout](nodemcu-esp_32s-pines.jpg)
+  ![esp32_pinout](img/nodemcu-esp_32s-pines.jpg)
 
 * **Mapa de pines ESP8266**
   
-  ![esp8266_pinout](nodemcu_pins.png)
+  ![esp8266_pinout](img/nodemcu_pins.png)
 
 * **Arduino Nano 33 BLE Sense**
 
-  ![arduino_ble_sense](arduino_ble_sense.png)
+  ![arduino_ble_sense](img/arduino_ble_sense.png)
 
 <br/>
 <br/>
@@ -450,24 +456,24 @@ Para profundizar mas consulte la información relacionada con los sistemas de de
 
 [Fritzing](https://fritzing.org/) es una plataforma para plataforma permitira prototipar hardware en su computador y verificar su funcionamiento antes de hacer el montaje en fisico.
 
-![fritzing](Fritzing_breadboard_view.jpg)
+![fritzing](img/Fritzing_breadboard_view.jpg)
 
 Para realizar prototipado usado Fritzing empleando elementos de terceros (de diferentes fabricantes) realice los siguientes pasos:
 1. **Buscar el componente**: En internet hay muchos lugares en los que puede encontrar archivos `**.fzpz files**`  (Fritzing part files). En este caso lo unico que debe hacer es descargar el archivo una vez importado. Por ejemplo en el siguiente [link](https://forum.fritzing.org/t/looking-for-raspberry-pi-5-fritzing-part/21511/2), se encuentra el componente de la **Rpi5**:
    
-   ![download_component](download_component.png)
+   ![download_component](img/download_component.png)
    
 2. **Importar el componente**: Despues de descargar el componente vaya al menu de **Compontentes** y seleccione la opción **Importar**:
 
-   ![importar_componente](importar_componente.png)   
+   ![importar_componente](img/importar_componente.png)   
 
    Luego busque los componentes y agreguelos (en este caso vamos a agregar [Raspberry-Pi5.fzpz](Raspberry-Pi5.fzpz)):
 
-   ![rPi5_component](rPi5_component.png)
+   ![rPi5_component](img/rPi5_component.png)
 
    Una vez importado este aparecerá en el almacen de **My Parts** tal y como se muestra en la siguiente figura:
 
-   ![componente_agregado](componente_agregado.png)
+   ![componente_agregado](img/componente_agregado.png)
 
    > **Parentesis**<br>
    > Repita el procedimiento anterior agregando los siguientes componentes: [ESP32-C3-DevKitC-02.f](ESP32-C3-DevKitC-02.fzpz), [ESP32S_HiLetgo](ESP32S_HiLetgo.fzpz) y [Arduino Nano 33 BLE Sense](Arduino%20Nano%2033%20BLE%20Sense.fzpz)
@@ -475,11 +481,11 @@ Para realizar prototipado usado Fritzing empleando elementos de terceros (de dif
        
 3. **Guarde el componente agregado**: Cierre el fritzing y cuando aparezca el mensaje para guardar los cambios en el almacen **My Parts** de click en el botón guardar. 
    
-   ![guardar_componente](guardar_componente.png)
+   ![guardar_componente](img/guardar_componente.png)
 
    Si esto esta bien hecho, la proxima vez que abra fritzing, el almacen **My parts** contendra los nuevos componentes agregados y listos para ser usados en el circuito que vaya a realizar.
 
-   ![componente_ok](componente_ok.png)
+   ![componente_ok](img/componente_ok.png)
 
 
 La siguiente tabla muestra enlaces con componentes disponibles en la Web:
@@ -506,17 +512,17 @@ La siguiente tabla muestra enlaces con componentes disponibles en la Web:
 
 Un **prototipo** es una versión inicial del producto cuya finalidad es proporcionar una representación tangible y funcional del producto para identificar posibles mejoras, problemas y obtener retroalimentación de usuarios.
 
-![prototipado](prototipado.png)
+![prototipado](img/prototipado.png)
 
 En nuestro contexto, antes de empezar, es necesario tener bien claro cuales son los requerimientos que debe cumplir el sistema electronico y proceder a determinar los componentes que haran parte del sistema en cuestión. 
 
-![thinking_design](thinking_design.png)
+![thinking_design](img/thinking_design.png)
 
 Dentro de los alcances que vamos a manejar definimos algunos pasos los cuales se describen a continuación:
 
 1. **Diseñar el circuito**: Este procedimiento implica el diseño del esquematico (para profundizar respecto al tema acceda al sitio [How to Read a Schematic](https://learn.sparkfun.com/tutorials/how-to-read-a-schematic/)) en el cual se especifique claramente la conexión de los componentes. La siguiente figura muestra algunos simbolos de uso común:
    
-   ![esquematico](fig-esquematico.png)
+   ![esquematico](img/fig-esquematico.png)
    
    A la par que se va realizando el diseño del esquematico, se va construyendo el **BOM**, una plantilla sencilla para nuestro caso pude ser la siguiente:
 
@@ -528,25 +534,25 @@ Dentro de los alcances que vamos a manejar definimos algunos pasos los cuales se
 
 2. **Realizar el montaje del circuito**: A partir del esquematico, se procede al montaje y prueba del circuito diseñado conectando los diferentes componentes en una protoboard (para mas información consulte [Breadboards for Beginners](https://learn.adafruit.com/breadboards-for-beginners)).
    
-   ![montaje-bb](fig-montaje.png)
+   ![montaje-bb](img/fig-montaje.png)
 
    Aqui, se llevan a cabo las primeras pruebas de funcionamiento y se hacen las correcciones necesarias antes de seguir con la versión final del producto.
 
    A veces el proceso de montaje se reduce si se cuentan con modulos externos y tarjetas de expanción ([**sección 6**](#6-tarjetas-de-expación-y-modulos)) tal y como el que se muestra a continuación:
 
-   ![modulo_switch](Tactile-Pushbutton-Switch-Module-1.jpg)
+   ![modulo_switch](img/Tactile-Pushbutton-Switch-Module-1.jpg)
 
 3. **Definir la lista de componentes**: Una vez hecho lo anterior, el siguiente paso cosiste en hacer un inventario de los componentes necesarios conocido como **Bill of Materials (BOM)** ([What is a Bill of Materials (BOM) in PCB Design?](https://www.seeedstudio.com/blog/2019/07/24/what-is-a-bill-of-materials-bom-in-pcb-design/)). La siguiente figura (tomada del siguiente [link](https://www.proto-electronics.com/blog/how-to-create-best-bom-for-pcb)) muestra un BOM tipico:
    
-   ![BOM](BOM_example.png)
+   ![BOM](img/BOM_example.png)
 
 4. **Diseñar el PCB del prototipo**: Una vez que el diseño es probado y se determina que funciona de acuerdo a las especificaciones, se procede a diseñar el circuito impreso del diseño. Para ello se pueden usar programas de diseño PCB como KiCad o Eagle.
    
-   ![pcb](fig-pcb.png)
+   ![pcb](img/fig-pcb.png)
 
 5. **Ensamblar y probar el protipo**: Una vez se tiene tiene lo anterior lo que se debe realizar es soldar los componentes a la PCB y mostrar el producto funcional.
    
-   ![product](Electronic_Product_1.jpeg)
+   ![product](img/Electronic_Product_1.jpeg)
    
    Despues de esto, se pueden llevar a cabo nuevas mejoras mediante la aplicación de un proceso iterativo con el fin de obtener el producto ideal.
 
@@ -565,25 +571,25 @@ El siguiente ejemplo se resume el procedimiento anterior haciendo enfasis en los
 
 1. **Diseñar el circuito**: A continuación se muestra el esquematico:
    
-   ![led_sch](esquematico-led.jpg)
+   ![led_sch](img/esquematico-led.jpg)
 
 2. **Realizar el montaje**: Antes de montar el circuito en una protoboard, se usará Fritzing para esto:
    
-   ![led_bb](montaje-bb.jpg)
+   ![led_bb](img/montaje-bb.jpg)
    
    Es importante notar, que en la figura anterior, se mostraron dos posibles conexiones del mismo circuito, la idea es resaltar que para el mismo esquematico pueden existir diferentes montajes de modo que, mas alla del montaje que se haga, lo realmente importante es que las conexiones de los compotentes sea la correcta.
    
    Finalmente, se procede a realizar el montaje fisico tal y como se muestra en la siguiente figura:
 
-   ![led_fisico](montaje-fisico.png)
+   ![led_fisico](img/montaje-fisico.png)
 
    A continuación se muestra el circuito simulado en tinkercad ([link](https://www.tinkercad.com/things/3xGQvJq9Oq1-ejemploprototipo)):
 
-   ![simulacion](simulacion_prototipo.png)
+   ![simulacion](img/simulacion_prototipo.png)
 
    La simulación en wokwi ([link](https://wokwi.com/projects/406696186582842369)) tambien se muestra a continuación:
 
-   ![simulacion_wokwi](sim_wokwi.png)
+   ![simulacion_wokwi](img/sim_wokwi.png)
 
 
 3. **Definir la lista de componentes**: A continuación se muestra la lista de componentes del circuito:
@@ -614,7 +620,7 @@ La lista de componentes se muestra en el siguiente BOM:
 
 El esquemático se muestra a continuación:
 
-![sch_ejecicio1](ejercicio1.png)
+![sch_ejecicio1](img/ejercicio1.png)
 
 Realizar las siguientes tareas:
 1. Realice el montaje en fritzing y guardelo como **variable_led_flash.fzz**. Luego, genere las imagenes asociadas al esquematico y al montaje.
@@ -651,7 +657,7 @@ El siguiente sistema muestra un generador de tonos sencillo. La lista de compone
 
 El esquemático se muestra a continuación:
 
-![sch_ejecicio2](ejercicio2.png)
+![sch_ejecicio2](img/ejercicio2.png)
 
 Realizar las siguientes tareas:
 1. Realice el montaje en fritzing y guardelo como **sounds.fzz**. Luego, genere las imagenes asociadas al esquematico y al montaje.
@@ -686,15 +692,15 @@ Realizar las siguientes tareas:
 
 El proceso de prototipado usando protoboard depende de la complejidad del circuito y de los componentes disponible y en el peor de los casos, puede ser sumamente completo (imagen tomada de **BREADBIN IS AN 8-BIT TTL CPU ON A BREADBOARD, IN A BREAD BIN** ([link](https://hackaday.com/2021/10/05/breadbin-is-an-8-bit-ttl-cpu-on-a-breadboard-in-a-bread-bin/))):
 
-![procesador](procesador_8bits.png)
+![procesador](img/procesador_8bits.png)
 
 Afortunadamente, para ahorrar trabajo como este existen las **tarjetas de expación** o **shields** los cuales permiten conectar de manera externa componentes y modulos externos sin necesidad de usar la protoboard. Por ejemplo, la **Base Shield V2** ([link](https://wiki.seeedstudio.com/Base_Shield_V2/)):
 
-![base_shield](Base_Shield_v2-1.png)
+![base_shield](img/Base_Shield_v2-1.png)
 
 Por otro lado un **modulo externo**, consiste de uno o varios componentes de hardware con todas las conexiónes y elementos necesarios para realizar la conexión directa de los componentes a los puertos de una placa de desarrollo o una tarjeta de expansión, sin necesidad de hacer uso de hardware de acondicionamiento adicional. En resumenn, el uso de un modulo externo hace que la conexión de un componente pase a ser practicamente **plug & play** ahorrandonos el uso de protoboard y alambrado adicional. La siguiente figura muestra un ejemplo donde se usa hardware externo.
 
-![conexion_modulo](arduino_servo.png)
+![conexion_modulo](img/arduino_servo.png)
 
 En la sección 3, se mostraron algunos de los modulos **plug & play** disponibles en el aboratorio, estos se caracterizan por ser modulos de iniciación ya que la complejidad de los componentes no es mayor. Sin embargo existen modulos mas expecializados como GPS, transeptores, modulos inalambricos y sensores y actuadores de mayor presición y potencia disponibles. 
 
@@ -725,7 +731,7 @@ Arduino es una plataforma opensource de electronica que combina software y hardw
 
 El modelo de programación de arduino esta basado en el **API de Arduino** el cual espone un conjunto de funciónes y estructuras (constantes, variables, tipos de datos, objetos, etc) que permiten la interacción del microcontrolador con hardware externo (sensores y actuadores). La información del API se encuentra en la pagina Language Reference ([link](https://www.arduino.cc/reference/en/)).
 
-![arduino-ref](arduino-reference.png)
+![arduino-ref](img/arduino-reference.png)
 
 Antes de empezar se recomienda que tenga a la mano el documento  **Arduino Cheat Sheet** ([link](https://github.com/UdeA-IoT/reference-sheets/blob/main/percepcion/arduino/Arduino_Cheat_Sheet.pdf)) de Sparkfun.
 
@@ -740,11 +746,11 @@ Desarrollar aplicación implica combinar conocimientos de hardware y software. E
 
 De todos las placas existentes, se va a hacer uso de la ESP32 ([datasheet](https://cdn.sparkfun.com/datasheets/IoT/esp32_datasheet_en.pdf)). De las diferentes diferentes plataformas de desarrollo para ESP32 existentes se dispone de la placa NodeMCU-32S de Ai-Thinker ([Nodemcu-32s Datasheet](https://docs.ai-thinker.com/_media/esp32/docs/nodemcu-32s_product_specification.pdf))
 
-![node-mcu](nodemcu-32s.png)
+![node-mcu](img/nodemcu-32s.png)
 
 Para empezar, lo que primero debemos tener a la mano es el diagrama de pines de la tarjera el cual, se muestra a continuación:
 
-![pines_ESP32](nodemcu_32s_pin.png)
+![pines_ESP32](img/nodemcu_32s_pin.png)
 
 Una vez se tiene claridad en esto, se procede a realizar los siguientes pasos con el fin de programar la placa:
 1. Identificar claramente los pines de la placa de desarrollo que seran impleados para la conexión de dispositivos externos (sensores, actuadores, etc.). Hecho esto proceder a realizar la conexión de los componentes.
@@ -756,7 +762,7 @@ Una vez se tiene claridad en esto, se procede a realizar los siguientes pasos co
 
 Inicialmente, vamos a explorar el API de Arduino para manejar entradas y salidas analogas y digitales básicas. Como punto de partida se tiene que tener claro los pines que se van a usar y, como estos son multifuncionales, tener claridad en las funciones que estos soportan. Para esto es necesario consultar en el datasheet de la placa el diagrama de pines y las funciones que estos pueden llevar a cabo. A continuación, por comodidad volvemos a mostrar el mapa de pines para la ESP32 disponible en el laboratorio:
 
-![pines_ESP32](nodemcu_32s_pin.png)
+![pines_ESP32](img/nodemcu_32s_pin.png)
 
 La siguiente tabla muestra los pines de la placa clasificados según la funcionalidad:
 
@@ -808,7 +814,7 @@ A continuación, se muestran algunos ejemplos basicos donde se explota el API de
 
 * **Montaje**:
   
-  ![esp32-1](montaje1.png)
+  ![esp32-1](img/montaje1.png)
 
 
 * **Código**: esp32-ej1.ino
@@ -834,7 +840,7 @@ A continuación, se muestran algunos ejemplos basicos donde se explota el API de
 
 * **Montaje**:
   
-  ![esp32-12](montaje2.png)
+  ![esp32-12](img/montaje2.png)
 
 
 * **Código**: esp32-ej2.ino
@@ -873,7 +879,7 @@ A continuación, se muestran algunos ejemplos basicos donde se explota el API de
 
 * **Montaje**:
   
-  ![esp32-3](montaje3.png)
+  ![esp32-3](img/montaje3.png)
 
 
 * **Código**: esp32-ej3.ino
@@ -906,7 +912,7 @@ A continuación, se muestran algunos ejemplos basicos donde se explota el API de
 
 * **Montaje**:
   
-  ![esp32-4](montaje4.png)
+  ![esp32-4](img/montaje4.png)
 
 
 * **Código**: esp32-ej4.ino
@@ -946,7 +952,7 @@ Una de las aplicaciones mas utilies del puerto serial es que facilita el debug d
 
 * **Montaje**:
   
-  ![esp32-4](esp32_debug-serial.png)
+  ![esp32-4](img/esp32_debug-serial.png)
 
 
 * **Código**: 
@@ -1081,7 +1087,7 @@ A continuación se va a mostrar el procedimiento anterior mediante algunos ejemp
 
 En el [**ejercicio 1**](#54-ejercicios-de-refuerzo) se mostró un sistema de sistema de parpadeo manual usando el Arduino UNO:
 
-![ejercicio1](ejercicio1.png)
+![ejercicio1](img/ejercicio1.png)
 
 El código originalmente implementado, se muestra a continuación:
 
@@ -1127,7 +1133,7 @@ Repita los pasos realizados anteriormente para el circuito de [**ejercicio 2**](
 
 Antes de empezar, tenga a la mano, el diagrama de pines del NodeMCU (dada la importantci de esto, se lo volvemos a mostrar, disculpenos por cansones):
 
-![pines_ESP32](nodemcu_32s_pin.png)
+![pines_ESP32](img/nodemcu_32s_pin.png)
 
 Luego, dependiendo de los requerimientos del sistema determine con claridad los pines a emplear y el funcionamiento que estos tendran. Luego, proceda a codificar el programa y realice las conexiones del montaje y, finalmente, proceda a compilar y a descargar el firmware en la placa usando el IDE apropiado.  En nuestro caso hablaremos de los dos mas empleados:
 * Arduino IDE
@@ -1150,32 +1156,32 @@ A continuación, se muestra una lista de proyectos aplicando algunas de las cosa
 
 1. Conectar al ESP32 un led RGB y ponerlo a alumbrar usando diferentes colores [[[simulacion]](https://wokwi.com/projects/391210532094486529) | [[solucion]](ejemplos_GPIO/RGB_example/example1/README.md)].
    
-   ![RGB_1](ESP32_RGB_1.png)
+   ![RGB_1](img/ESP32_RGB_1.png)
 
 2. Conectar al ESP32 un led RGB y ponerlo a alumbrar cambiano a un color diferentes cada vez que el usuario presione un botón [[[simulacion]](https://wokwi.com/projects/391344633629636609) | [[solucion]](ejemplos_GPIO/RGB_example/example2/README.md)].
    
-   ![RGB_2](ESP32_RGB_2.png)
+   ![RGB_2](img/ESP32_RGB_2.png)
 
 ### 11.2. Ejemplos usando un sensor PIR
 
 1. Activar un led cuando se detecte presencia a traves del uso de un sensor PIR [[[simulacion]](https://wokwi.com/projects/391364172928279553) | [[solucion]](https://github.com/UdeA-IoT/clases-IoT_2024-2/blob/main/clase4/ejemplos_GPIO/PIR_example/example1/README.md)]
    
-   ![PIR_1](ESP32_PIR_example1.png)
+   ![PIR_1](img/ESP32_PIR_example1.png)
 
 2. Activar un led cuando se detecte presencia a traves del uso de un sensor PIR. Ademas de la señal luminosa que empleada para indicar la presencia, el sistema contara con un buzzer para generar una alarma sonora. Esta alarma sonora se podrá desactivar o activar por medio de un pulsador. [[[simulacion]](https://wokwi.com/projects/391364988125921281) | [[solucion]](https://github.com/UdeA-IoT/clases-IoT_2024-2/blob/main/clase4/ejemplos_GPIO/PIR_example/example2/README.md)]
    
-   ![PIR_2](ESP32_PIR_example2.png)
+   ![PIR_2](img/ESP32_PIR_example2.png)
 
 
 ### 11.3. Ejemplos usando un sensor de ultrasonido
 
 1. Este ejemplo fue adaptado de **SparkFun Inventor's Kit Experiment Guide - Project 3: Motion** ([link](https://learn.sparkfun.com/tutorials/sparkfun-inventors-kit-experiment-guide---v40/project-3-motion)) para el ESP32 [[[simulacion]](https://wokwi.com/projects/391349504507707393) | [[solucion]](https://github.com/UdeA-IoT/clases-IoT_2024-2/blob/main/clase4/ejemplos_GPIO/ultrasonic-sensor_example/example1/README.md)].
    
-   ![ultrasonido_1](esp32-ultrasonido_1.png)
+   ![ultrasonido_1](img/esp32-ultrasonido_1.png)
   
 2. En el siguiente ejemplo muestra, usando el monitor serial, la distancia en centimetros y pulgadas el cual se implemento en el anterior con un led que cambia de color conforme la distancia medida por el sensor ultrasonico cambia. [[[simulacion]](https://wokwi.com/projects/391350736522728449) | [[solucion]](https://github.com/UdeA-IoT/clases-IoT_2024-2/blob/main/clase4/ejemplos_GPIO/ultrasonic-sensor_example/example2/README.md)]
    
-   ![ultrasonido_2](esp32-ultrasonido_2.png)
+   ![ultrasonido_2](img/esp32-ultrasonido_2.png)
 
 ## 12. Sobre los componentes
 

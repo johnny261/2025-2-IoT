@@ -8,7 +8,7 @@
 >* Explorar otras porsibilidaes para la programación del ESP32.
 
 ## 1. Descargar y configurar Arduino IDE
-Ingrese este [enlace](https://www.arduino.cc/en/software)
+Ingrese este [enlace](https://www.arduino.cc/en/software) descargue e instale las 
 
 ## 2. Adicionar tarjetas de ESP32.
 
