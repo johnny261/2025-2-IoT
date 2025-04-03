@@ -18,6 +18,7 @@
 2. Una vez instalado vaya a Archivo -> Preferencias -> Manejar tarjetas adicionales e insertar este enlace dentro del recuadro
 [https://espressif.github.io/arduino-esp32/package_esp32_index.json](https://espressif.github.io/arduino-esp32/package_esp32_index.json)
 Este paso es necesario para que el IDE reconozca las tarjetas desarrolladas para el ESP32.
+![Configuración Arduino ESP32](img/Arduino-Prefs.png)
 
 ## 1. Componentes basicos
 
