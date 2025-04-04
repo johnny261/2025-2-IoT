@@ -16,17 +16,21 @@
 ## 0. Configuración del Arduino IDE
 1. Ingrese este [enlace](https://www.arduino.cc/en/software) descargue e instale el software 
 
-2. Una vez instalado vaya a Archivo -> Preferencias -> Manejar tarjetas adicionales e insertar este enlace dentro del recuadro<br>
+2. Una vez instalado vaya a Archivo -> Preferencias -> Manejar tarjetas adicionales e insertar este enlace dentro del recuadro
+
 [https://espressif.github.io/arduino-esp32/package_esp32_index.json](https://espressif.github.io/arduino-esp32/package_esp32_index.json)
 Este paso es necesario para que el IDE reconozca las tarjetas desarrolladas para el ESP32.
+
 ![Configuración Arduino ESP32](img/Arduino-Prefs.png)
 
-3. En el Arduino IDE busque la tarjeta adecuada para su microcontrolador usando el menú:<br>
+3. En el Arduino IDE busque la tarjeta adecuada para su microcontrolador usando el menú:
+
 Herramientas -> Tarjetas -> ESP32
 
 4. Conecte el microcontrolador al computador, el computador debe reconocer este micro como un puerto COMxx (en Windows) o un puerto /dev/ttySxx (en Linux)
 
 5. En el Arduino IDE busque la tarjeta adecuada para su microcontrolador usando el menú:
+
 Herramientas -> Puertos -> \[Elija el puerto acá\]
 
 ![Configuración del puerto](img/Arduino-Port.png)
