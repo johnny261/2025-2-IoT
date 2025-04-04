@@ -32,7 +32,7 @@
 *.app
 
 # Folders
-/clase1
+#/clase1
 /clase2
 /clase5
 /clase6
