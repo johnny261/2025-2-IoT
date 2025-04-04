@@ -31,6 +31,7 @@
 *.out
 *.app
 
+# Folders
 /clase1
 /clase2
 /clase5
