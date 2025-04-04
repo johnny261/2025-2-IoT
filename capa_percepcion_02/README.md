@@ -473,63 +473,7 @@ Para profundizar mas consulte la información relacionada con los sistemas de de
 
 ## 6. Prototipado básico
 
-### 6.1. Primeros pasos con Fritzing
-
-[Fritzing](https://fritzing.org/) es una plataforma para plataforma permitira prototipar hardware en su computador y verificar su funcionamiento antes de hacer el montaje en fisico.
-
-![fritzing](img/Fritzing_breadboard_view.jpg)
-
-Para realizar prototipado usado Fritzing empleando elementos de terceros (de diferentes fabricantes) realice los siguientes pasos:
-1. **Buscar el componente**: En internet hay muchos lugares en los que puede encontrar archivos `**.fzpz files**`  (Fritzing part files). En este caso lo unico que debe hacer es descargar el archivo una vez importado. Por ejemplo en el siguiente [link](https://forum.fritzing.org/t/looking-for-raspberry-pi-5-fritzing-part/21511/2), se encuentra el componente de la **Rpi5**:
-   
-   ![download_component](img/download_component.png)
-   
-2. **Importar el componente**: Despues de descargar el componente vaya al menu de **Compontentes** y seleccione la opción **Importar**:
-
-   ![importar_componente](img/importar_componente.png)   
-
-   Luego busque los componentes y agreguelos (en este caso vamos a agregar [Raspberry-Pi5.fzpz](Raspberry-Pi5.fzpz)):
-
-   ![rPi5_component](img/rPi5_component.png)
-
-   Una vez importado este aparecerá en el almacen de **My Parts** tal y como se muestra en la siguiente figura:
-
-   ![componente_agregado](img/componente_agregado.png)
-
-   > **Parentesis**<br>
-   > Repita el procedimiento anterior agregando los siguientes componentes: [ESP32-C3-DevKitC-02.f](ESP32-C3-DevKitC-02.fzpz), [ESP32S_HiLetgo](ESP32S_HiLetgo.fzpz) y [Arduino Nano 33 BLE Sense](Arduino%20Nano%2033%20BLE%20Sense.fzpz)
-
-       
-3. **Guarde el componente agregado**: Cierre el fritzing y cuando aparezca el mensaje para guardar los cambios en el almacen **My Parts** de click en el botón guardar. 
-   
-   ![guardar_componente](img/guardar_componente.png)
-
-   Si esto esta bien hecho, la proxima vez que abra fritzing, el almacen **My parts** contendra los nuevos componentes agregados y listos para ser usados en el circuito que vaya a realizar.
-
-   ![componente_ok](img/componente_ok.png)
-
-
-La siguiente tabla muestra enlaces con componentes disponibles en la Web:
-
-|Fabricante|	Información	|Repositorio	|Link descarga|
-|---|---|---|---|
-|Adafruit|Using the Adafruit Library with Fritzing [[link]](https://learn.adafruit.com/using-the-adafruit-library-with-fritzing)|https://github.com/adafruit/Fritzing-Library|[[descarga]](https://github.com/adafruit/Fritzing-Library/archive/master.zip)|
-|Sparkfun|Make Your Own Fritzing Parts [[link]](https://learn.sparkfun.com/tutorials/make-your-own-fritzing-parts)|https://github.com/adafruit/Fritzing-Library||
-|Seeed Studio|Let’s Fritzing: Announcing XIAO Fritzing Parts! [[link]](https://www.seeedstudio.com/blog/2024/07/11/xiao-fritzing-parts/)|https://github.com/Seeed-Studio/fritzing_parts|[[descarga]](https://github.com/Seeed-Studio/fritzing_parts/blob/master/seeed_fritzing_parts.fzbz)|
-|Elegoo||https://github.com/marcinwisniowski/ElegooFritzingBin|[[descarga]](https://github.com/marcinwisniowski/ElegooFritzingBin/releases/download/0.6.3/Elegoo-0.6.3.fzbz)|
-|StudioPieters|Fritzing – New Parts [[link]](https://www.studiopieters.nl/fritzing/)|https://github.com/AchimPieters/Fritzing-Custom-Parts|[[descarga]](https://github.com/AchimPieters/Fritzing-Custom-Parts/releases/download/0.0.4/Fritzing.parts.rar)|
-|ESP32 NodeMCU|ESP32S-HiLetgo Dev Boad with Pinout Template [[link]](https://forum.fritzing.org/t/esp32s-hiletgo-dev-boad-with-pinout-template/5357)||[[descarga]](https://forum.fritzing.org/uploads/default/original/2X/1/1c6c1b0e5bff03730a40b696b354783432fbb506.fzpz)|
-|Arduino Nano 33 BLE Sense [[link]](https://store-usa.arduino.cc/products/arduino-nano-33-ble-sense)|||[[descarga]](https://content.arduino.cc/assets/Arduino%20Nano%2033%20BLE%20Sense.fzpz)|
-|Fritzing Projects|Pagina de proyectos de Fritzing [[link]](https://fritzing.org/projects/)|
-|Arduino Modules Info| ArduinoModulesInfo [[link]](https://arduinomodules.info/)|
-
-> **Para profundizar**<br>
-> Para profundizar mas en el uso de la herramienta Fritzing puede seguir los siguientes enlaces:
-> 1. **Fritzing - Documentación de Aprendizaje** [[link]](https://fritzing.org/learning/)
-> 2. **How to Add Components in Fritzing** [[link]](https://steemit.com/utopian-io/@thinkingmind/how-to-add-components-in-fritzing)
-> 2. **Fritzing** [[link]](https://chem.libretexts.org/Courses/University_of_Arkansas_Little_Rock/IOST_Library/07%3A_Electronics_Book/01%3A_Electric_Fundamentals/05%3A_Fritzing)
-
-### 6.2. Pasos para llevar a cabo el prototipado
+## 6.1. Pasos para llevar a cabo el prototipado
 
 Un **prototipo** es una versión inicial del producto cuya finalidad es proporcionar una representación tangible y funcional del producto para identificar posibles mejoras, problemas y obtener retroalimentación de usuarios.
 
@@ -586,7 +530,7 @@ Dentro de los alcances que vamos a manejar definimos algunos pasos los cuales se
 > 3. **Ultimate Guide: How to Develop and Prototype a New Electronic Hardware Product in 2024** [[link]](https://predictabledesigns.com/how-to-develop-and-prototype-a-new-product/)
 > 4. **7 steps to making a prototype and supercharging your product design** [[link]](https://www.linkedin.com/pulse/7-steps-making-prototype-supercharging-your-product-design-gufhc)
 
-### 6.3. Ejemplo sencillo
+### 6.2. Ejemplo sencillo
 
 El siguiente ejemplo se resume el procedimiento anterior haciendo enfasis en los primeros tres pasos. Para esto suponga que se desea diseñar un circuito que permita encender y apagar un del usando un interruptor.
 
@@ -623,7 +567,7 @@ El siguiente ejemplo se resume el procedimiento anterior haciendo enfasis en los
 
 Con el objetivo de afianzar el procedimiento anterior, lo invitamos a que desarrolle los siguientes dos ejercicios.
 
-### 6.4. Ejercicios de refuerzo
+### 6.3. Ejercicios de refuerzo
 
 #### Ejercicio 1
 
