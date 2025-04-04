@@ -36,6 +36,10 @@ Herramientas -> Puerto -> \[Elija el puerto acá\]
 
 ![Configuración del puerto](img/Arduino-Port.png)
 
+6. Inserte el código de la imágen, compile el código (1) descarge el programa al microcontrolador (2) y abra el monitor serial (3)
+
+![Configuración del puerto](img/Arduino-TestSerial.png)
+
 ## 1. Componentes basicos
 
 Dentro del contexto de Internet of Things (IoT), una "thing" se refiere a cualquier dispositivo físico que está conectado a la red y pueda interactuar con otros dispositivos, sistemas, o servicios. 
