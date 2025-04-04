@@ -588,8 +588,7 @@ El esquemático se muestra a continuación:
 ![sch_ejecicio1](img/ejercicio1.png)
 
 Realizar las siguientes tareas:
-1. Realice el montaje en fritzing y guardelo como **variable_led_flash.fzz**. Luego, genere las imagenes asociadas al esquematico y al montaje.
-2. El programa que se descarga en el Arduino UNO, se muestra a continuació:
+1. El programa que se descarga en el Arduino UNO, se muestra a continuació:
    
    ```c++
    const int voltsInPin = A3;
@@ -608,7 +607,7 @@ Realizar las siguientes tareas:
    }
    ```
 
-3. Empleando [wokwi](https://wokwi.com/), realice el montaje, escriba el código para simular y proceda a realizar la simulación. Luego, haga publico el link de simulación para compartir su trabajo con la comunidad.
+2. Empleando [wokwi](https://wokwi.com/), realice el montaje, escriba el código para simular y proceda a realizar la simulación. Luego, haga publico el link de simulación para compartir su trabajo con la comunidad.
 
 #### Ejercicio 2
 
