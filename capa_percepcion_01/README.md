@@ -25,7 +25,7 @@ El corazón de los sistemas IoT son las cosas. Estas, son las encargadas de perm
 
 Para realizar labores de prototipado se emplean sistemas de desarrollo (dev kits) los cuales son de dos tipos *Microcontroladores* y *Computadoras de placa unica* tal y como se muestra en la siguiente figura:
 
-![dev_kits](dev_kids.png)
+![dev_kits](img/dev_kids.png)
 
 ### Sistemas disponibles en el laboratorio
 
@@ -59,7 +59,7 @@ Debido a la popularidad y facilidad, en el curso de usará el Framework de Ardui
 
 En este modelo, las placas se programa en C o C++ mediante un archivo de código conocido como **sketch** ([link](https://github.com/microsoft/IoT-For-Beginners/blob/main/1-getting-started/lessons/2-deeper-dive/README.md)):
 
-![arduino-skech](arduino-sketch.png)
+![arduino-skech](img/arduino-sketch.png)
 
 El **sketch** se compone de dos funciones principales (ver figura tomada del siguiente [link](https://github.com/microsoft/IoT-For-Beginners/blob/main/1-getting-started/lessons/2-deeper-dive/README.md)):
 * **`setup`**: Código de inicialización (inicialización de puertos, conexión a la red Wi-Fi, servicios de nube, etc) que se ejecuta cuando se enciende el microcontrolador. 
@@ -100,13 +100,13 @@ A lo largo del curso usaremos el Visual Studio Code con Platformio, de modo que 
 
 Antes de empezar tenga a la mano un diagrama de pines para es ESP32 tal y como se muestra a continuación:
 
-![ESP32](ESP32_dev-kit.jpg)
+![ESP32](img/ESP32_dev-kit.jpg)
 
 Asi mismo tenga a la mano los siguientes recursos para consulta rapida:
 - [x] Arduino cheat sheet ([link](https://www.cheat-sheets.org/saved-copy/Arduino-cheat-sheet-v02c.pdf)
 - [X] Arduino Language Reference ([link](https://www.arduino.cc/reference/en/))
   
-  ![arduino-ref](arduino-reference.png)
+  ![arduino-ref](img/arduino-reference.png)
 
 Para montar los siguientes ejemplos siga los pasos descritos la pagina **Primeros pasos con platformio** ([link](./plaftormio_tutorial))
 
@@ -124,11 +124,11 @@ Para montar los siguientes ejemplos siga los pasos descritos la pagina **Primero
 
 **Esquematico**:
 
-![esquematico](example1/ESP32-blink_sch.png)
+![esquematico](img/example1/ESP32-blink_sch.png)
 
 **Diagrama de conexión**:
 
-![breakboard](example1/ESP32-blink_bb.png)
+![breakboard](img/example1/ESP32-blink_bb.png)
 
 
 **Código**:
@@ -164,7 +164,7 @@ void loop() {
 
 **Simulación**: La simulación se muestra en el siguiente [link](https://wokwi.com/projects/406255037756300289)
 
-![simu](simulation_example1.png)
+![simu](img/simulation_example1.png)
 
 #### Ejemplo 2
 
@@ -186,11 +186,11 @@ void loop() {
 
 **Esquematico**:
 
-![esquematico](ESP32-ledSerial_sch.png)
+![esquematico](img/ESP32-ledSerial_sch.png)
 
 **Diagrama de conexión**:
 
-![breakboard](ESP32-ledSerial_bb.png)
+![breakboard](img/ESP32-ledSerial_bb.png)
 
 
 **Código**:
@@ -242,7 +242,7 @@ void loop() {
 **Simulación**: La simulación se muestra en el siguiente [link](https://wokwi.com/projects/406259527261320193)
 
 
-![simu2](simulation_example2.png)
+![simu2](img/simulation_example2.png)
 
 
 ## Referencias
