@@ -19,6 +19,7 @@
 2. Una vez instalado vaya a Archivo -> Preferencias -> Manejar tarjetas adicionales e insertar este enlace dentro del recuadro
 
 [https://espressif.github.io/arduino-esp32/package_esp32_index.json](https://espressif.github.io/arduino-esp32/package_esp32_index.json)
+
 Este paso es necesario para que el IDE reconozca las tarjetas desarrolladas para el ESP32.
 
 ![Configuración Arduino ESP32](img/Arduino-Prefs.png)
@@ -31,7 +32,7 @@ Herramientas -> Tarjetas -> ESP32
 
 5. En el Arduino IDE busque la tarjeta adecuada para su microcontrolador usando el menú:
 
-Herramientas -> Puertos -> \[Elija el puerto acá\]
+Herramientas -> Puerto -> \[Elija el puerto acá\]
 
 ![Configuración del puerto](img/Arduino-Port.png)
 
