@@ -11,7 +11,7 @@ De los temas anteriormente vistos, es importante resaltar la importancia que jue
 
 Tal y como se muestra en la siguiente figura (tomada de IoT Engineering - [link](https://github.com/tamberg/fhnw-iot/tree/master/03))
 
-![Iot-reference-model](Iot-reference-model.png)
+![Iot-reference-model](img/Iot-reference-model.png)
 
 En el modelo de referencia IoT, uno de los elementos claves son las plataformas IoT pues permiten almacenar y almacenar (entre otras cosas) datos de sensores. Para conectar las cosas con estas plataformas con las cosas, es importante conocer la forma como se lleva a cabo la comunicación y la interación establecida por estas la cual, generalmente es a traves de peticiones HTTP expuestas a traves de APIs.
 
@@ -21,7 +21,7 @@ Respecto al manejo de APIs, el siguiente documento se muestra un ejemplo tipico 
 
 Una interfaz de programación de aplicaciones (API) permite una conversación de software con otra.  Utiliza interacciones basadas en la web o protocolos de comunicación comunes y sus propios estándares patentados determinando qué tipo de datos, servicios y funcionalidad expone la aplicación a terceros.
 
-![API](api.png)
+![API](img/api.png)
 
 Las API están diseñadas para ser consumidas mediante programación por otras aplicaciones y también pueden ser usadas por usuarios que desean interactuar con la aplicación manualmente. 
 
@@ -40,7 +40,7 @@ Una API de servicio web REST (API REST) es una interfaz de programación que se 
 * Código de estado HTTP
 * Encabezados/cuerpo HTTP
 
-![api-rest](api-rest.png)
+![api-rest](img/api-rest.png)
 
 A continuación vamos a analizar tanto las solicitudes como las respuestas.
 
@@ -49,7 +49,7 @@ A continuación vamos a analizar tanto las solicitudes como las respuestas.
 Las solicitudes de API REST son solicitudes HTTP en las que una aplicación (cliente) pide al servidor que realice una función.  Las solicitudes de API REST se componen de cuatro componentes principales:
 * **Identificador uniforme de recursos (URI)**: También conocido como **localizador uniforme de recursos (URL)**, identifica qué recurso desea manipular el cliente. 
   
-  ![componentes-uri](componentes-uri.png)
+  ![componentes-uri](img/componentes-uri.png)
 
   Tal y como se resalta en la figura anterior, las URI tienen los siguientes componentes:
   * **Esquema**: especifica qué protocolo HTTP se debe usar, http o https.

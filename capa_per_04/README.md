@@ -31,7 +31,7 @@ Hasta el momento hemos visto como conectar una placa de desarrollo con dispositi
 
 Un ejemplo en la pagina **Obstacle avoiding robot using ESP32** ([link](https://www.robotique.tech/robotics/obstacle-avoiding-robot-using-esp32/)) se muestra como implementar un robot que evite obstaculos mediante diferentes tipos de sensores y actuadores conectados a un ESP32 tal y como se muestra en la siguiente figura:
 
-![robot](esp32-voiture-obstacles-english.png)
+![robot](img/esp32-voiture-obstacles-english.png)
 
 Notese que con lo que se ha visto hasta el momento es facil dar manejo mediante las funciones basicas del Framework Arduino vistas hasta el momento. Sin embargo, ¿Que sucede si los dispositivos que se conectan son mas complejos?, ¿Usar estas funciones es suficiente o habra que hechar mano de otras posibilidades?
 
@@ -56,11 +56,11 @@ Para permitir la comunicación de estos componentes, se emplean diferentes proto
 
 Uno de los recursos mas limitados de cualquier componente electrónico es la cantidad de conexiones físicas disponibles (puertos). Conectar un componente requiere el uso de uno o varios puertos (cuando la transferencia entre datos es exclusivamente paralela) lo cual puede constituir un problema de escalabilidad en cuanto a la cantidad de elementos que puede tener una cosa. Para hacer frente a esto se implementan buses de comunicación serial con el fin de permitir la comunicación entre dos o mas dispositivos usando el minimo numero de puertos. La siguiente tabla tomada de la pagina **Comparación de protocolos de comunicación serial** ([link](https://resources.altium.com/es/p/comparing-all-serial-communications-protocols)) resume algunos de los principales:
 
-![protocolos](Serial_Communications_Protocols-Comparison.webp)
+![protocolos](img/Serial_Communications_Protocols-Comparison.webp)
 
 El uso de un bus serial se puede evidenciar en la siguiente figura ([simulacion](https://wokwi.com/projects/385342221728294913)). Notese que hay dos dispositivos electronicos (display oled y RTC) conectados a traves de un mismo par de pines (cables verdea) a un ESP32.
 
-![iot_i2c_ejemplo](iot_i2c_ejemplo.png)
+![iot_i2c_ejemplo](img/iot_i2c_ejemplo.png)
 
 A continuación se tratará, con un poco mas de detalle, algunos de los diferentes tipos de protocolos de comunicación serial empleados para la conexión de dispositivos:
 * RS-232 [[link]](RS_232/README.md)

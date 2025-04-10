@@ -23,7 +23,7 @@ Cuando se adquiere una una impresora, el primer paso para que esta pueda usarse,
 
 Con el caso de los sistemas elecrónicos basados en microcontroladores sucede algo similar, cuando se desea que una aplicación use un hardware externo (sensor, actuador o memoria, por citar algunos casos), es necesario disponer de los ***drivers*** necesarios para permitir la interacción entre el ***firmware*** (programa descargado en el microcontrolador) y el ***hardware externo*** con el que este interactua.
 
-![drivers](drivers.png)
+![drivers](img/drivers.png)
 
 
 Existen casos en los que el hardware externo no posee soporte, de modo que, se hace necesario para el programador el diseño y la programación de los programas (drivers) necesarios para su interacción y control; sin embargo, esta es una tarea dificil por que exige conocimiento de hardware, protocolos y detalles de bajo nivel relacionados con el diseño del hardware. Afortunadamente, una de las caracteristicas del proyecto Arduino radica en su filosofia **Open Hardware y Software** lo cual hace que gran candidad de hardware sea soportada para la plataforma Arduino.
@@ -51,13 +51,13 @@ El proceso de instalación de librerias en Arduino es sumamente facil, lo unico 
 La siguiente imagen muestra el procedimiento de instalación de la biblioteca **Keypad** usando el gestor de librerias para el **IDE Arduino v2**:
 
 <p align="center">
-  <img src="keypad_lib_arduino.png">
+  <img src="img/keypad_lib_arduino.png">
 </p>
 
 Despues de que se tiene instalada la biblioteca, es posible usar las funciones que esta tiene para lo cual, es necesario consultar la documentación. Por ejemplo, para la libreria **Keypad** la documentación se encuentra en el siguiente [repositorio](https://github.com/Chris--A/Keypad). En la siguiente figura se muestra el sketch del ejemplo que usa esta libreria:
 
 <p align="center">
-  <img src="arduino_keypad.png">
+  <img src="img/arduino_keypad.png">
 </p>
 
 #### 1.2.2. Instalación de librerias en el Platformio
@@ -65,7 +65,7 @@ Despues de que se tiene instalada la biblioteca, es posible usar las funciones q
 La instalación de librerias en el platformio se puede realizar de varias maneras. Para instalar librerias se accede al **Library manager** en la interfaz **PlatformIO Home** ([link](https://docs.platformio.org/en/stable/home/index.html))  dando click en el botón **Libraries** tal y como se muestra en la siguiente imagen:
 
 <p align="center">
-  <img src="pio-home-library-stats.png">
+  <img src="img/pio-home-library-stats.png">
 </p>
 
 A continuación vamos a explorar de manera resumida como realizar el procedimiento completo cuando se usa el Platformio.
@@ -91,19 +91,19 @@ A continuación vamos a explorar de manera resumida como realizar el procedimien
    * Buscar la libreria por el nombre en el cuadro de texto del **Library manager**. Por ejemplo, si se quisiera instalar la libreria **Keypad** colocar su nombre en el cuadro de busqueda y luego seleccionar de la lista que aparece la libreria de interes:
   
    <p align="center">
-   <img src="search_lib_keypad.png ">
+   <img src="img/search_lib_keypad.png ">
    </p>
 
    * Despues de seleccionar la libreria dar click en **Add to Project** para agregarla a un proyecto.
    
    <p align="center">
-   <img src="lib_keypad_add.png">
+   <img src="img/lib_keypad_add.png">
    </p>
 
    * De la lista de proyectos que aparecen, seleccionar el proyecto en el cual se quiere agregar esta. (en nuestro caso, el proyecto se llamaba **test-keypad_ESP32** de modo que este es el que se seleccina)
   
    <p align="center">
-   <img src="lib_keypad_project.png">
+   <img src="img/lib_keypad_project.png">
    </p>
   
    Una vez el proceso de agregar las librerias necesarias se ha completado, el archivo **platformio.ini** queda actualizado con la información de las librerias agregadas:
@@ -129,7 +129,7 @@ A continuación vamos a explorar de manera resumida como realizar el procedimien
 Una vez hecho lo anterior, ya es posible empezar a trabajar en el archivo **main.cpp** usando las funciones de la biblioteca **Keypad** tal y como se muestra a continuación:
 
 <p align="center">
-<img src="main_keypad.png">
+<img src="img/main_keypad.png">
 </p>
 
 > **Para profundizar** </br> En el tutorial **Installing SimpleFOClibrary with PlatformIO** ([link](https://docs.simplefoc.com/library_platformio)) se muestra claramente un ejemplo completo del proceso de instalación.
@@ -199,7 +199,7 @@ A continuación se muestran algunos ejemplos en los cuales se emplean librerias 
 El teclado, es uno de los elementos mas comunes para la entrada de datos en un sistema embebido. Existen de todos los tipos y tamaños; sin embargo, en los siguientes ejemplos haremos uso del teclado matricial.
 
 <p align = "center">
-  <img src = "keypads.png">
+  <img src = "img/keypads.png">
 </p>
 
 Los teclados son un elemento casi que obligado para facilitar la interacción del usuario con el sistema embebido.
@@ -211,13 +211,13 @@ En los siguientes ejemplos se muestran como usar un teclado matricial.
 1. Instalación de la libreria **Keypad** para interactuar con un teclado matricial ([link](./librerias/keypad/example1_keypad/README.md)).
    
    <p align = "center">
-   <img src = "arduino_keypad_bb.png">
+   <img src = "img/arduino_keypad_bb.png">
    </p>
 
 2. Uso de un teclado matricial en un ESP32. Cada vez que se presiona una tecla, se produce un sonido para indicar el evento. ([link](./librerias/keypad/example2_keypad/README.md)).
    
    <p align = "center">
-   <img src = "esp32_keypad_bb.png">
+   <img src = "img/esp32_keypad_bb.png">
    </p>
 
 ### 2.2. Display LCD
@@ -225,7 +225,7 @@ En los siguientes ejemplos se muestran como usar un teclado matricial.
 Para que un usuario pueda usar facilmente un sistema embebido, éste tiene que disponer de alguna forma de desplegar los datos de manera clara para que el usuario pueda conocer el estado del sistema y pueda interactuar de manera correcta con este. En esta parte se abordara el display LCD, un periferico de salida mas robusto que los leds y los buzzer.
 
 <p align = "center">
-  <img src = "LCDs.png">
+  <img src = "img/LCDs.png">
 </p>
 
 > **Importante** <br> Antes de analizar los ejemplos, se recomienda que explore la pagina **Liquid Crystal Displays (LCD) with Arduino** ([link](https://docs.arduino.cc/learn/electronics/lcd-displays/))
@@ -241,7 +241,7 @@ En los siguientes sencillos ejemplos se ilustra el uso del LCD.
 2. Sistema de acceso sencillo ([link](./librerias/lcd/example2_lcd/README.md)).
    
    <p align = "center">
-   <img src = "esp32_keypad_lcd_bb.png">
+   <img src = "img/esp32_keypad_lcd_bb.png">
    </p> 
 
 ### 2.3. Sensor de temperatura y humedad - DTHxx
@@ -249,13 +249,13 @@ En los siguientes sencillos ejemplos se ilustra el uso del LCD.
 Los sistemas embebidos perciben el ambiente por medio de sensores. Los sensores permiten medir diferentes variables ambientales. En el siguiente ejemplo se explorara el sensore de temperatura y humedad DHT11.
 
 <p align = "center">
-<img src = "sensores_temperatura.png">
+<img src = "img/sensores_temperatura.png">
 </p> 
 
 Existen casos en los cuales la salida de los sensores es una trama de datos digitales lo cual implica el uso de un protocolo de comunicación serial. En el caso del DTH11, este emplea el protocolo **One Wire** para transferir la información de la temperarura y la humedad entre el sensor y el microcontrolador mediante una trama serial como la que se muestra a continuación:
 
 <p align = "center">
-<img src = "CombinedTiming.jpg">
+<img src = "img/CombinedTiming.jpg">
 </p> 
 
 De este modo, para poder usar este sensor, es necesario instalar las librerias necesarias para permitir la comunicación serial (mediante el protocolo one wire) y para interactuar con el sensor propiamente dicho.
@@ -267,7 +267,7 @@ A continuación, se muestran un ejemplo relacionado.
 1. Sensado de temperatura y humedad usando el DTH11 ([link](./librerias/dth11_esp32/README.md))
    
    <p align = "center">
-   <img src = "dh11-esp32_bb-1.jpg">
+   <img src = "img/dh11-esp32_bb-1.jpg">
    </p>
 
 <!---
