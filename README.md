@@ -1,4 +1,4 @@
-# Respositorio del curso de IoT (2024/2)
+# Respositorio del curso de IoT (2025/1)
 
 ## Finalidad
 
