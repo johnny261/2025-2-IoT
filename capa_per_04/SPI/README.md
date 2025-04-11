@@ -1,9 +1,12 @@
 # Protocolo SPI
 
+Este es un protocolo de comunicación entre un MCU (Maestro o Controlador) y uno o varios dispositivos (Esclavos o Periféricos).<br>
+Se caracteriza por ser sincrónico y alcanzar altas velocidades de transferencia de datos (hasta unos 60 Mbps).
+
 ## Líneas SPI
 
 * SCK o CLK: Reloj (señal de sincronía)
-* MOSI o DO: Salida del maestro, Entrada del esclavo.
+* MOSI o PICO o DO: Salida del maestro, Entrada del esclavo.
 * MISO o DI: Salida del esclavo, Entrada del maestro.
 * /CS o /SS: Línea de selección de esclavo (Activa en bajo).
 
