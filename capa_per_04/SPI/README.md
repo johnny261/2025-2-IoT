@@ -7,8 +7,8 @@ Se caracteriza por ser sincrónico y alcanzar altas velocidades de transferencia
 
 * SCK o CLK: Reloj (señal de sincronía)
 * MOSI o PICO o DO: Salida del maestro, Entrada del esclavo.
-* MISO o DI: Salida del esclavo, Entrada del maestro.
-* /CS o /SS: Línea de selección de esclavo (Activa en bajo).
+* MISO o POCI o DI: Salida del esclavo, Entrada del maestro.
+* /CS o /SS: Línea de selección de esclavo (activa en bajo).
 
 ## Conexión Maestro - 1 Esclavo
 
