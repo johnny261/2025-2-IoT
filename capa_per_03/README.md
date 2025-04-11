@@ -42,7 +42,7 @@ Despues de que se tiene instalada la biblioteca, es posible usar las funciones q
   <img src="img/arduino_keypad.png">
 </p>
 
-### 1.3. Actividad: LCD I2C
+### 1.3. Ejemplo: LCD I2C
 
 1. Observe que en la siguiente figura se conecta este dispositivo para el Arduino a traves del puerto I2C.
    
@@ -153,7 +153,7 @@ En los siguientes sencillos ejemplos se ilustra el uso del LCD.
 
 ### 2.3. Sensor de temperatura y humedad - DTHxx
 
-Los sistemas embebidos perciben el ambiente por medio de sensores. Los sensores permiten medir diferentes variables ambientales. En el siguiente ejemplo se explorara el sensore de temperatura y humedad DHT11.
+Los sistemas embebidos perciben el ambiente por medio de sensores. Los sensores permiten medir diferentes variables ambientales. En el siguiente ejemplo se explorara el sensor de temperatura y humedad DHT11.
 
 <p align = "center">
 <img src = "img/sensores_temperatura.png">

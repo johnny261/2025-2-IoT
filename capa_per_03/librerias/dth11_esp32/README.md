@@ -67,37 +67,6 @@ Las librerias empleadas se muestran a continuación:
 |1|DHT|**DHT sensor library** [[repo]](https://github.com/adafruit/DHT-sensor-library)|
 |2|Adafruit Unified Sensor|**Adafruit Unified Sensor Driver** [[repo]](https://github.com/adafruit/Adafruit_Sensor)|
 
-
-### Archivo de configuración en Platformio
-
-```ini
-; PlatformIO Project Configuration File
-;
-;   Build options: build flags, source filter
-;   Upload options: custom upload port, speed and extra flags
-;   Library options: dependencies, extra library storages
-;   Advanced options: extra scripting
-;
-; Please visit documentation for the other options and examples
-; https://docs.platformio.org/page/projectconf.html
-
-[env:upesy_wroom]
-platform = espressif32
-board = upesy_wroom
-framework = arduino
-lib_deps = 
-	adafruit/DHT sensor library@^1.4.6
-	adafruit/Adafruit Unified Sensor@^1.1.14
-
-
-[env:node32s]
-platform = espressif32
-board = node32s
-framework = arduino
-lib_deps = 
-	adafruit/DHT sensor library@^1.4.6
-	adafruit/Adafruit Unified Sensor@^1.1.14
-```
 ###  Código
 
 El código de la aplicación (**main.cpp**) se muestra a continuación:
