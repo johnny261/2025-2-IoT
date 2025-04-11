@@ -19,7 +19,7 @@ El protocolo 1-Wire es un sistema de comunicación serial que permite la transfe
 
 * Lectura y escritura de datos: Se transmiten bits mediante tiempos específicos de señal.
 
-## Ejemplo de uso con Arduino
+## Ejemplos de uso con Arduino
 
 Se muestra un ejemplo con un sensor de temperatura DS18B20 en Arduino IDE, normalmente se emplea la librería OneWire:
 
@@ -49,7 +49,7 @@ void loop() {
 
 ## Otros ejemplos
 
-1. Ejemplo 1 [[link]](dht11/esp32/README.md)
+1. Sensor DTH11 [[link]](dht11/esp32/README.md)
 
 
 ## Referencias
