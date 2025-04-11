@@ -51,9 +51,9 @@ Como punto de partida básico es bueno recordar los roles que puede tomar el ESP
 
 ### 3.1. Prueba de conectividad
 
-Antes de empezar, lo primero que debemos realizar es una prueba basica para verificar el Wi-Fi del modulo **NodeMCU-32S**. De modo que siga los siguientes pasos:
+Antes de empezar, lo primero que debemos realizar es una prueba basica para verificar el Wi-Fi del modulo **ESP32**. De modo que siga los siguientes pasos:
 1. Abra el Arduino IDE.
-2. Seleccione la placa (**Tools > Board > ESP32 Arduino > NodeMCU-32s**).
+2. Seleccione la placa (**Tools > Board > ESP32 > ESP32 Dev Module**).
    
    ![seleccion_modulo](img/modulo_esp32.png)
 
@@ -63,7 +63,7 @@ Antes de empezar, lo primero que debemos realizar es una prueba basica para veri
    
    ![seleccion_puerto](img/puerto_seleccion.png)
 
-5. En la sección de ejemplos (**examples**) busque los ejemplos relacionados con el **ESP31-DevKit** y busque el que dice **WifiScan**,asi: **File > Examples > Wifi > WiFiScann**)
+5. En la sección de ejemplos (**examples**) busque los ejemplos relacionados con el **ESP32 DEv Module** y busque el que dice **WifiScan**,asi: **File > Examples > Wifi > WiFiScann**)
    
    ![ejemplo_scan](img/esp32_wifi_scan.png)
    
