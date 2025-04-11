@@ -15,7 +15,7 @@ Antes de empezar a trabajar recuerde el proceso de desarrollo para la plataforma
 
 ## 2. Arduino core for the ESP32
 
-Como previamente se habia mencionado, el ESP32 es una evolución del ESP8266. En el laboratorio se cuentan con varios modulos [NodeMCU-32S](https://docs.ai-thinker.com/_media/esp32/docs/nodemcu-32s_product_specification.pdf). La siguiente lista resalta algunas referencias de utilidad si lo que se desea es sobre el ESP32:
+Como previamente se habia mencionado, el ESP32 es una evolución del ESP8266. En el laboratorio se cuentan con varios modulos. La siguiente lista resalta algunas referencias de utilidad si lo que se desea es sobre el ESP32:
 * **ESP32 - Pagina del fabricante** ([link](https://www.espressif.com/en/products/socs/esp32))
 * **ESP-IDF Programming Guide** ([link](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/))
 * **Arduino core for the ESP32** ([link](https://espressif.github.io/arduino-esp32/))
