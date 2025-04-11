@@ -63,7 +63,7 @@ Antes de empezar, lo primero que debemos realizar es una prueba basica para veri
    
    ![seleccion_puerto](img/puerto_seleccion.png)
 
-5. En la sección de ejemplos (**examples**) busque los ejemplos relacionados con el **NodeMCU-32S** (**Examples for NodeMCU-32S**) y busque el que dice **WifiScan**,asi: **File > Examples > Wifi > WiFiScann**)
+5. En la sección de ejemplos (**examples**) busque los ejemplos relacionados con el **ESP31-DevKit** y busque el que dice **WifiScan**,asi: **File > Examples > Wifi > WiFiScann**)
    
    ![ejemplo_scan](img/esp32_wifi_scan.png)
    
