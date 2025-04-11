@@ -23,7 +23,7 @@ El protocolo 1-Wire es un sistema de comunicación serial que permite la transfe
 
 Se muestra un ejemplo con un sensor de temperatura DS18B20 en Arduino IDE, normalmente se emplea la librería OneWire:
 
-```
+```ino
 #include <OneWire.h>
 #include <DallasTemperature.h>
 
