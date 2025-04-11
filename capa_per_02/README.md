@@ -24,7 +24,7 @@ Este paso es necesario para que el IDE reconozca las tarjetas desarrolladas para
 
 ![Configuración Arduino ESP32](img/Arduino-Prefs.png)
 
-3.1. Instale en el Arduino IDE las tarjetas del ESP32.
+3.1. Instale en el Arduino IDE las tarjetas del ESP32. 1. Seleccione tarjetas, 2. Busque "esp", 3. Instálelas.
 
 ![Instalación de tarjetas ESP32](img/ESP32-boards.png) 
 
