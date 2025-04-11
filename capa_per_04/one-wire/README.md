@@ -1,13 +1,53 @@
 # Protocolo One Wire
 
-## Contenido
+El protocolo 1-Wire es un sistema de comunicación serial que permite la transferencia de datos y energía entre dispositivos utilizando solo un cable de datos y tierra. Es ampliamente utilizado en sensores de temperatura como el DS18B20 y otros dispositivos de identificación y almacenamiento.
 
-En construcción...
+## Conceptos básicos del protocolo 1-Wire
 
-Disculpe las molestias causadas.
+* Un solo cable: Se usa un único hilo para la comunicación y, en algunos casos, también para la alimentación.
 
+* Direcciones únicas: Cada dispositivo tiene un identificador de 64 bits único.
 
-## Ejemplos
+* Modo de alimentación parasitaria: Algunos dispositivos pueden operar sin una fuente de alimentación dedicada.
+
+* Comunicación maestro-esclavo: Un controlador (maestro) se comunica con múltiples dispositivos (esclavos).
+
+## Principio de funcionamiento de la comunicación
+* Reset y presencia: El maestro envía un pulso de reinicio y espera una respuesta de los dispositivos conectados.
+
+* Comandos ROM: Se utilizan para identificar y seleccionar dispositivos específicos.
+
+* Lectura y escritura de datos: Se transmiten bits mediante tiempos específicos de señal.
+
+## Ejemplo de uso con Arduino
+
+Se muestra un ejemplo con un sensor de temperatura DS18B20 en Arduino IDE, normalmente se emplea la librería OneWire:
+
+```
+#include <OneWire.h>
+#include <DallasTemperature.h>
+
+#define PIN_SENSOR 2  // Pin donde está conectado el DS18B20
+
+OneWire oneWire(PIN_SENSOR);
+DallasTemperature sensors(&oneWire);
+
+void setup() {
+    Serial.begin(9600);
+    sensors.begin();
+}
+
+void loop() {
+    sensors.requestTemperatures(); // Solicitar la lectura de temperatura
+    float tempC = sensors.getTempCByIndex(0); // Obtener la temperatura en grados Celsius
+    Serial.print("Temperatura: ");
+    Serial.print(tempC);
+    Serial.println(" °C");
+    delay(1000); // Esperar un segundo antes de la siguiente lectura
+}
+```
+
+## Otros ejemplos
 
 1. Ejemplo 1 [[link]](dht11/esp32/README.md)
 
