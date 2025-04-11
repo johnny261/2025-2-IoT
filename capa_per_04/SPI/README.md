@@ -1,10 +1,19 @@
 # Protocolo SPI
 
-## Contenido
+## Líneas SPI
 
-En construcción...
+* SCK o CLK: Reloj (señal de sincronía)
+* MOSI o DO: Salida del maestro, Entrada del esclavo.
+* MISO o DI: Salida del esclavo, Entrada del maestro.
+* /CS o /SS: Línea de selección de esclavo (Activa en bajo).
 
-Disculpe las molestias causadas.
+## Conexión Maestro - 1 Esclavo
+
+![Maestro - 1 Esclavo](SPI-Master1Slave.png)
+
+## Conexión Maestro - Varios Esclavos
+
+![Maestro - Múltiples Esclavos](SPI-MasterMSlave.png)
 
 ## Ejemplos
 
@@ -13,7 +22,9 @@ Disculpe las molestias causadas.
 3. **wokwi-microsd-card Reference** [[link]](https://docs.wokwi.com/parts/wokwi-microsd-card)
    * [simulacion 1](https://wokwi.com/projects/310542489623724609)
    * [simulacion 2](https://wokwi.com/projects/310692660849410626)
-4. **wokwi-ili9341 Reference** [[link]](https://docs.wokwi.com/parts/wokwi-ili9341)
+4. **wokwi SPI screen 1** [[link]](https://wokwi.com/projects/389142490169497601)
+   **wokwi SPI screen 2** [[link]](https://wokwi.com/projects/409312856465230849)
+5. **wokwi Reference** [[link]](https://docs.wokwi.com/parts/wokwi-ili9341)
    * [simulacion 1](https://wokwi.com/projects/307567201804616256)
    * [simulacion 2](https://wokwi.com/projects/307567963154678338)
    * [simulacion 3](https://wokwi.com/projects/307664460274729536)

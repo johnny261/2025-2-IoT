@@ -62,7 +62,7 @@ El uso de un bus serial se puede evidenciar en la siguiente figura ([simulacion]
 
 ![iot_i2c_ejemplo](img/iot_i2c_ejemplo.png)
 
-A continuación se tratará, con un poco mas de detalle, algunos de los diferentes tipos de protocolos de comunicación serial empleados para la conexión de dispositivos:
+A continuación se tratará, con un poco mas de detalle o se mostrarán ejemplos de algunos de los diferentes tipos de protocolos de comunicación serial empleados para la conexión de dispositivos:
 * RS-232 [[link]](RS_232/README.md)
 * One Wire [[link]](one-wire/README.md)
 * I2C [[link]](I2C/README.md)
