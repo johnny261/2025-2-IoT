@@ -228,7 +228,7 @@ La siguiente tabla resume algunos de los principales modulos de acuerdo a la tec
 ## 4. Sensores y actuadores disponibles en el laboratorio
 
 Mediante los sensores y los actuadores es como la cosa interactua con el entorno (ambiente). Existen numerosos kits de iniciación en el mercado. En el laboratorio se disponen de los siguientes modulos:
-* **Grove - Starter Kit v3** [[link]](https://udea-iot.github.io/UdeA_IoT-page/docs/sensores-actuadores/inventario-lab#grove---starter-kit-v3)
+* **Grove - Starter Kit v3** [[link]](https://wiki.seeedstudio.com/Grove_Starter_Kit_v3/)
   
   ![kit_groove](img/Grove-Starter_Kit_v2.jpg)
 
@@ -249,7 +249,7 @@ Mediante los sensores y los actuadores es como la cosa interactua con el entorno
   > **Documentación**<br>
   > Para mas información consultar la documentación del **Grove - Starter Kit v3** ([link](https://wiki.seeedstudio.com/Grove_Starter_Kit_v3/))
 
-* **37 Sensor Kit - Elegoo** [[link]](https://udea-iot.github.io/UdeA_IoT-page/docs/sensores-actuadores/inventario-lab#37-sensor-kit---elegoo)
+* **37 Sensor Kit - Elegoo** [[link]](https://www.instructables.com/Arduino-37-in-1-Sensors-Kit-Explained/)
   
   ![sensores_elegoo](img/sensores_elegoo.jpg)
 
