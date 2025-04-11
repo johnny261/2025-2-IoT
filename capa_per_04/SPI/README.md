@@ -20,13 +20,13 @@ Se caracteriza por ser sincrónico y alcanzar altas velocidades de transferencia
 
 ## Ejemplos
 
-1. **ESP32: Guide for MicroSD Card Module using Arduino IDE** [[link]](https://randomnerdtutorials.com/esp32-microsd-card-arduino/)
-2. **ESP32 – Micro SD Card Interface** [[link]](https://www.instructables.com/ESP32-Micro-SD-Card-Interface/)
-3. **wokwi-microsd-card Reference** [[link]](https://docs.wokwi.com/parts/wokwi-microsd-card)
+1. **wokwi SPI screen 1** [[link]](https://wokwi.com/projects/389142490169497601)
+2. **wokwi SPI screen 2** [[link]](https://wokwi.com/projects/409312856465230849)
+3. **ESP32: Guide for MicroSD Card Module using Arduino IDE** [[link]](https://randomnerdtutorials.com/esp32-microsd-card-arduino/)
+4. **ESP32 – Micro SD Card Interface** [[link]](https://www.instructables.com/ESP32-Micro-SD-Card-Interface/)
+5. **wokwi-microsd-card Reference** [[link]](https://docs.wokwi.com/parts/wokwi-microsd-card)
    * [simulacion 1](https://wokwi.com/projects/310542489623724609)
    * [simulacion 2](https://wokwi.com/projects/310692660849410626)
-4. **wokwi SPI screen 1** [[link]](https://wokwi.com/projects/389142490169497601)
-5. **wokwi SPI screen 2** [[link]](https://wokwi.com/projects/409312856465230849)
 6. **wokwi Reference** [[link]](https://docs.wokwi.com/parts/wokwi-ili9341)
    * [simulacion 1](https://wokwi.com/projects/307567201804616256)
    * [simulacion 2](https://wokwi.com/projects/307567963154678338)
