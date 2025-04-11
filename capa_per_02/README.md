@@ -24,7 +24,11 @@ Este paso es necesario para que el IDE reconozca las tarjetas desarrolladas para
 
 ![Configuración Arduino ESP32](img/Arduino-Prefs.png)
 
-3. En el Arduino IDE busque la tarjeta adecuada para su microcontrolador usando el menú:
+3.1. Instale en el Arduino IDE las tarjetas del ESP32.
+
+![Instalación de tarjetas ESP32](img/ESP32-boards.png) 
+
+3.2. En el Arduino IDE busque la tarjeta adecuada para su microcontrolador usando el menú:
 
 Herramientas -> Tarjetas -> ESP32
 
