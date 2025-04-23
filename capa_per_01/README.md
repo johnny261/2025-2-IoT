@@ -13,7 +13,7 @@
 
 ## Simuladores online
 
-La siguiente es una lista de aplicaciones que se usaran para propositos de simulación. Para usarlas basta con tener una cuenta de correo como la de google poe ejemplo:
+La siguiente es una lista de aplicaciones que se usarán para propósitos de simulación. Para usarlas basta con tener una cuenta de correo de google por ejemplo:
 - [x] Tinkercad (https://www.tinkercad.com/)
 - [x] Wokwi (https://wokwi.com/)
 
@@ -53,9 +53,9 @@ Para conocer mas sobre estos elementos disponibles en el laboratorio consulte el
 
 ### Arduino framework
 
-Para programar un microcontrolador se necesitan algunas herramientas para desarrollar el software que se ejecutara en el microcontrolador (firmeware). Debido a la gran cantidad de microcontroladores existentes, cada fabricante ofrece un framework para facilitar el desarrollo de aplicaciones para cualquier microntrolador compatibles con estos.
+Para programar un microcontrolador se necesitan algunas herramientas para desarrollar el software que se ejecutara en el microcontrolador (firmware). Debido a la gran cantidad de microcontroladores existentes, cada fabricante ofrece un framework para facilitar el desarrollo de aplicaciones para cualquier microntrolador compatibles con estos.
 
-Debido a la popularidad y facilidad, en el curso de usará el Framework de Arduino. Arduino es una plataforma de electronica open source que combina hardware y software lo que lo hace ideal para programar placas no solo exclusivas de Arduino, sino tambien de otros fabricantes usando el modelo de programación empleado en Arduino para desarrollar software.
+Debido a la popularidad y facilidad, en el curso de usará el Framework de Arduino. Arduino es una plataforma de electrónica open source que combina hardware y software lo que lo hace ideal para programar placas no solo exclusivas de Arduino, sino tambien de otros fabricantes usando el modelo de programación empleado en Arduino para desarrollar software.
 
 En este modelo, las placas se programa en C o C++ mediante un archivo de código conocido como **sketch** ([link](https://github.com/microsoft/IoT-For-Beginners/blob/main/1-getting-started/lessons/2-deeper-dive/README.md)):
 
@@ -63,7 +63,7 @@ En este modelo, las placas se programa en C o C++ mediante un archivo de código
 
 El **sketch** se compone de dos funciones principales (ver figura tomada del siguiente [link](https://github.com/microsoft/IoT-For-Beginners/blob/main/1-getting-started/lessons/2-deeper-dive/README.md)):
 * **`setup`**: Código de inicialización (inicialización de puertos, conexión a la red Wi-Fi, servicios de nube, etc) que se ejecuta cuando se enciende el microcontrolador. 
-* **`loop`**: Código que se ejecuta de maneta continua mientras el microcontrolador este encendido. Aqui es donde se implementa la logica de la aplicación (lectura de sensores, control de actuadores, envio y recepción de información, etc).
+* **`loop`**: Código que se ejecuta de manera continua mientras el microcontrolador este encendido. Aqui es donde se implementa la logica de la aplicación (lectura de sensores, control de actuadores, envio y recepción de información, etc).
 
 A continuación se muestra una plantilla de código tipica:
 
