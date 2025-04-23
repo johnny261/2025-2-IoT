@@ -2,8 +2,8 @@
 
 ## Contenido
 
-> * Explorar e instalar librerias de terceros en los IDEs en los IDEs Platformio y Arduino.
-> * Aprender a usar las diferentes estructuras de datos y funciones de las librerias para el desarrollo de software que un sistema IoT.
+> * Explorar e instalar bibliotecas de terceros en los IDEs en los IDEs Platformio y Arduino.
+> * Aprender a usar las diferentes estructuras de datos y funciones de las bibliotecas para el desarrollo de software que un sistema IoT.
 > * Explorar algunos ejemplos de aplicación
 
 ## Referencias principales
@@ -11,11 +11,11 @@
 1. Lección 3 **Interact with the phisycal world** ([link](https://github.com/microsoft/IoT-For-Beginners/blob/main/1-getting-started/lessons/2-deeper-dive/README.md)) del curso **IoT for Beginners** ([link](https://github.com/microsoft/IoT-For-Beginners)) de Microsoft.
 
 
-## 1. Librerias
+## 1. Bibliotecas
 
-### 1.1. Agregando librerias
+### 1.1. Agregando bibliotecas
 
-Exiten tutoriales en internet que explican muy bien como importar librerias portadas al API de Arduino, a continuación se listan estos enlaces:
+Exiten tutoriales en internet que explican muy bien como importar bibliotecas portadas al API de Arduino, a continuación se listan estos enlaces:
 1. **Installing an Arduino Library** de Sparkfun ([link](https://learn.sparkfun.com/tutorials/installing-an-arduino-library/all))
 2. **All About Arduino Libraries** de Adafruit ([link](https://learn.adafruit.com/adafruit-all-about-arduino-libraries-install-use/arduino-libraries))
 3. **Arduino Tips, Tricks, and Techniques** de Adafruit ([link](https://learn.adafruit.com/arduino-tips-tricks-and-techniques))
@@ -24,19 +24,19 @@ Exiten tutoriales en internet que explican muy bien como importar librerias port
 6. **Getting Started with VS Code and PlatformIO IDE for ESP32 and ESP8266 (Windows, Mac OS X, Linux Ubuntu)** de randomnerdtutorials ([link](https://randomnerdtutorials.com/vs-code-platformio-ide-esp32-esp8266-arduino/))
 7. **Library Management** de Platformio ([link](https://docs.platformio.org/en/latest/librarymanager/index.html))
 
-### 1.2 Instalación de librerias en el Arduino IDE
+### 1.2 Instalación de bibliotecas en el Arduino IDE
 
-El proceso de instalación de librerias en Arduino es sumamente facil, lo unico que se tiene que hacer es seguir las instrucciones de la pagina **Installing Libraries**. El procedimiento varia dependiendo de la version del IDE de Arduino que se tenga instalado, en los siguientes enlaces se puede consultar el procedimiento:
-1. **Instalación de librerias para el IDE de Arduino (v1)** [[link]](https://docs.arduino.cc/software/ide-v1/tutorials/installing-libraries/)
-2. **Instalación de librerias para el IDE de Arduino (v2)** [[link]](https://docs.arduino.cc/software/ide-v2/tutorials/ide-v2-installing-a-library/)
+El proceso de instalación de bibliotecas en Arduino es sumamente fácil, lo único que se tiene que hacer es seguir las instrucciones de la página **Installing Libraries**. El procedimiento varía dependiendo de la version del IDE de Arduino que se tenga instalado, en los siguientes enlaces se puede consultar el procedimiento:
+1. **Instalación de bibliotecas para el IDE de Arduino (v1)** [[link]](https://docs.arduino.cc/software/ide-v1/tutorials/installing-libraries/)
+2. **Instalación de bibliotecas para el IDE de Arduino (v2)** [[link]](https://docs.arduino.cc/software/ide-v2/tutorials/ide-v2-installing-a-library/)
 
-La siguiente imagen muestra el procedimiento de instalación de la biblioteca **Keypad** usando el gestor de librerias para el **IDE Arduino v2**:
+La siguiente imagen muestra el procedimiento de instalación de la biblioteca **Keypad** usando el gestor de bibliotecas para el **IDE Arduino v2**:
 
 <p align="center">
   <img src="img/keypad_lib_arduino.png">
 </p>
 
-Despues de que se tiene instalada la biblioteca, es posible usar las funciones que esta tiene para lo cual, es necesario consultar la documentación. Por ejemplo, para la libreria **Keypad** la documentación se encuentra en el siguiente [repositorio](https://github.com/Chris--A/Keypad). En la siguiente figura se muestra el sketch del ejemplo que usa esta libreria:
+Después de que se tiene instalada la biblioteca, es posible usar las funciones que esta tiene para lo cual, es necesario consultar la documentación. Por ejemplo, para la biblioteca **Keypad** la documentación se encuentra en el siguiente [repositorio](https://github.com/Chris--A/Keypad). En la siguiente figura se muestra el sketch del ejemplo que usa esta biblioteca:
 
 <p align="center">
   <img src="img/arduino_keypad.png">
@@ -48,12 +48,12 @@ Despues de que se tiene instalada la biblioteca, es posible usar las funciones q
    
    ![seeeduino_rgb](img/seeeduino_rgb.jpg)
 
-   Identifique en el ESP32 los pines I2C para realizar la conexión de este componente. Luego usando frizting realice la conexión a los pines apropiados.
+   Identifique en el ESP32 los pines I2C para realizar la conexión de este componente. Luego realice la conexión a los pines apropiados en el simulador.
 
 2. Descargar el firmware en el ESP32 siguiendo las siguientes instrucciones:
-   - [x] Instalar la libreria necesaria para usar este LCD siguiendo los pasos descritos previamente. La siguiente tabla resume los detalles necesarios:
+   - [x] Instalar la biblioteca necesaria para usar este LCD siguiendo los pasos descritos previamente. La siguiente tabla resume los detalles necesarios:
    
-     |# | Libreria|	Tipo [H: Hardware / S: Software]|Descripción|
+     |# | biblioteca|	Tipo [H: Hardware / S: Software]|Descripción|
      |---|---|---|---|
      |1 |Grove - LCD RGB Backlight [[link]](https://registry.platformio.org/libraries/seeed-studio/Grove%20-%20LCD%20RGB%20Backlight) [[repo]](https://github.com/Seeed-Studio/Grove_LCD_RGB_Backlight)|H|Grove - 16X2 LCD RGB Backlight - Full Color Display [[link]](https://www.seeedstudio.com/Grove-LCD-RGB-Backlight.html)|
 
@@ -99,11 +99,11 @@ Despues de que se tiene instalada la biblioteca, es posible usar las funciones q
 
 ## 2. Ejemplos
 
-A continuación se muestran algunos ejemplos en los cuales se emplean librerias de terceros para adaptar hardware externo a los diferentes proyectos sin necesidad de entrar en los detalles de su funcionamiento (casi como si se instalaran drivers por asi decirlo).
+A continuación se muestran algunos ejemplos en los cuales se emplean bibliotecas de terceros para adaptar hardware externo a los diferentes proyectos sin necesidad de entrar en los detalles de su funcionamiento (casi como si se instalaran drivers por asi decirlo).
 
 ### 2.1. Teclado matricial
 
-El teclado, es uno de los elementos mas comunes para la entrada de datos en un sistema embebido. Existen de todos los tipos y tamaños; sin embargo, en los siguientes ejemplos haremos uso del teclado matricial.
+El teclado, es uno de los elementos más comunes para la entrada de datos en un sistema embebido. Existen de todos los tipos y tamaños, sin embargo, en los siguientes ejemplos haremos uso del teclado matricial.
 
 <p align = "center">
   <img src = "img/keypads.png">
@@ -115,13 +115,13 @@ Los teclados son un elemento casi que obligado para facilitar la interacción de
 
 En los siguientes ejemplos se muestran como usar un teclado matricial. 
 
-1. Instalación de la libreria **Keypad** para interactuar con un teclado matricial ([link](./librerias/keypad/example1_keypad/README.md)).
+1. Instalación de la biblioteca **Keypad** para interactuar con un teclado matricial ([link](./bibliotecas/keypad/example1_keypad/README.md)).
    
    <p align = "center">
    <img src = "img/arduino_keypad_bb.png">
    </p>
 
-2. Uso de un teclado matricial en un ESP32. Cada vez que se presiona una tecla, se produce un sonido para indicar el evento. ([link](./librerias/keypad/example2_keypad/README.md)).
+2. Uso de un teclado matricial en un ESP32. Cada vez que se presiona una tecla, se produce un sonido para indicar el evento. ([link](./bibliotecas/keypad/example2_keypad/README.md)).
    
    <p align = "center">
    <img src = "img/esp32_keypad_bb.png">
@@ -129,7 +129,7 @@ En los siguientes ejemplos se muestran como usar un teclado matricial.
 
 ### 2.2. Display LCD
 
-Para que un usuario pueda usar facilmente un sistema embebido, éste tiene que disponer de alguna forma de desplegar los datos de manera clara para que el usuario pueda conocer el estado del sistema y pueda interactuar de manera correcta con este. En esta parte se abordara el display LCD, un periferico de salida mas robusto que los leds y los buzzer.
+Para que un usuario pueda usar fácilmente un sistema embebido, este tiene que disponer de alguna forma de desplegar los datos de manera clara para que el usuario pueda conocer el estado del sistema y pueda interactuar de manera correcta con este. En esta parte se abordará el display LCD, un periferico de salida mas robusto que los leds y los buzzer.
 
 <p align = "center">
   <img src = "img/LCDs.png">
@@ -139,13 +139,13 @@ Para que un usuario pueda usar facilmente un sistema embebido, éste tiene que d
 
 En los siguientes sencillos ejemplos se ilustra el uso del LCD.
 
-1. Contador simple usando el LCD ([link](./librerias/lcd/example1_lcd/README.md)).
+1. Contador simple usando el LCD ([link](./bibliotecas/lcd/example1_lcd/README.md)).
    
    <p align = "center">
    <img src = "lcd-counter_bb.png">
    </p> 
 
-2. Sistema de acceso sencillo ([link](./librerias/lcd/example2_lcd/README.md)).
+2. Sistema de acceso sencillo ([link](./bibliotecas/lcd/example2_lcd/README.md)).
    
    <p align = "center">
    <img src = "img/esp32_keypad_lcd_bb.png">
@@ -165,13 +165,13 @@ Existen casos en los cuales la salida de los sensores es una trama de datos digi
 <img src = "img/CombinedTiming.jpg">
 </p> 
 
-De este modo, para poder usar este sensor, es necesario instalar las librerias necesarias para permitir la comunicación serial (mediante el protocolo one wire) y para interactuar con el sensor propiamente dicho.
+De este modo, para poder usar este sensor, es necesario instalar las bibliotecas necesarias para permitir la comunicación serial (mediante el protocolo one wire) y para interactuar con el sensor propiamente dicho.
 
 > **Importante**: </br> Antes de empezar la recomendación es que le de una mirada a la pagina **DHT11, DHT22 and AM2302 Sensors** ([link](https://learn.adafruit.com/dht)) para entender sobre el sensor.
 
 A continuación, se muestran un ejemplo relacionado.
 
-1. Sensado de temperatura y humedad usando el DTH11 ([link](./librerias/dth11_esp32/README.md))
+1. Sensado de temperatura y humedad usando el DTH11 ([link](./bibliotecas/dth11_esp32/README.md))
    
    <p align = "center">
    <img src = "img/dh11-esp32_bb-1.jpg">
@@ -189,7 +189,7 @@ Enlaces:
 * https://randomnerdtutorials.com/esp32-ssd1306-oled-display-arduino-ide/
 * 
 
-Libreria:
+biblioteca:
 * U8g2 is a monochrome graphics library for embedded devices. U8g2 supports monochrome OLEDs and LCDs, which include our chip SSD1315.
 * https://github.com/olikraus/u8g2/wiki
 * https://github.com/olikraus/u8g2/wiki/u8g2reference
