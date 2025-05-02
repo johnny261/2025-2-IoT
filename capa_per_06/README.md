@@ -62,7 +62,7 @@ Las solicitudes de API REST son solicitudes HTTP en las que una aplicación (cli
   |POST|Crear (Create)|Crear un nuevo objeto o recurso.|
   |GET|lectura (Read)|Recuperar detalles de recursos del sistema.|
   |PUT|Actualizar|Reemplace o actualice un recurso existente.|  
-  |PARCHE|Actualización parcial|Actualice algunos detalles de un recurso existente.|
+  |PATCH|Actualización parcial|Actualice algunos detalles de un recurso existente.|
   |DELETE|Eliminar (Delete)|Remover un recurso del sistema.|
 
 * **Encabezado**: Tienen el formato de pares **```nombre-valor```** separados por dos puntos (**:**); esto es, ```[nombre]: [valor]```. Podemos distinguir dos tipos de encabezados:
