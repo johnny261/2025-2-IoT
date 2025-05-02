@@ -152,11 +152,7 @@ La siguiente tabla resume algunas de las plataformas IoT disponibles:
 
 3. Implementar un servicio web que permita encender y apagar un led de manera a traves de una interfaz web dentro de una misma red local. ([link](ejemplo3/))
 
-## 5. Actividad
-
-En construcción...
-
-## 6. Referencias
+## 5. Referencias
 
 * https://learn.adafruit.com/adafruit-io/rest-api
 * https://www.sparkfun.com/news/2379
