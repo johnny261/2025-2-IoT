@@ -20,7 +20,7 @@ El ESP32 es una evolución del ESP8266. En el laboratorio se cuentan con varios 
 * **ESP-IDF Programming Guide** ([link](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/))
 * **Arduino core for the ESP32** ([link](https://espressif.github.io/arduino-esp32/))
 
-En nuestro caso vamos a hacer énfasis en el **Arduino core for the ESP32** ([link](https://espressif.github.io/arduino-esp32/)) que es donde se encuentra toda la información para programar el ESP32 haciendo uso del API de arduino ([link](https://docs.espressif.com/projects/arduino-esp32/en/latest/)). 
+En nuestro caso vamos a hacer énfasis en el **Arduino core for the ESP32** ([link](https://espressif.github.io/arduino-esp32/)) que es donde se encuentra toda la información para programar el ESP32 haciendo uso del API de Arduino ([link](https://docs.espressif.com/projects/arduino-esp32/en/latest/)). 
 
 Antes de empezar es importante ver las bibliotecas disponibles en el API las cuales se pueden ver en el siguiente [link](https://docs.espressif.com/projects/arduino-esp32/en/latest/libraries.html).
 
