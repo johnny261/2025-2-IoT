@@ -160,7 +160,7 @@ Para mayor información puede consultar:
 
    **Procedimiento**: El procedimiento se describe en el [ejemplo1](./ejemplo1/README.md)
 
-2. Este es una variación del ejemplo anterior la cual consiste en agregar los dispositivos en una red ya disponible (como la del LIS por ejemplo). En este caso, solo se usará el ESP32 que hace de servidor y un PC (portatil y telefono movil) como cliente tal y como se muestra en la siguiente figura:
+2. Este es una variación del ejemplo anterior la cual consiste en agregar los dispositivos en una red ya disponible (como la del LIS por ejemplo). En este caso, solo se usará el ESP32 que hace de servidor y un terminal (portátil y teléfono móvil) como cliente tal y como se muestra en la siguiente figura:
    
    ![red_ESP32](ejemplo2/net_esp32-STA.png)
 
