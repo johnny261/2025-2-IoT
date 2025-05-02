@@ -17,7 +17,7 @@ Respecto al manejo de APIs, el siguiente documento se muestra un ejemplo típico
 
 ## 1. APIs
 
-Una interfaz de programación de aplicaciones (API) permite una conversación de software con otro. Utiliza interacciones basadas en la web o protocolos de comunicación comunes y sus propios estándares patentados determinando qué tipo de datos, servicios y funcionalidad expone la aplicación a terceros.
+Una interfaz de programación de aplicaciones (API) permite una conversación de un software con otro. Utiliza interacciones basadas en la web o protocolos de comunicación comunes y sus propios estándares patentados determinando qué tipo de datos, servicios y funcionalidad expone la aplicación a terceros.
 
 ![API](img/api.png)
 
