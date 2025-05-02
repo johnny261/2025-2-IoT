@@ -2,28 +2,26 @@
 
 Hasta el momento hemos visto los siguientes temas:
 
-* Conceptos basicos de programación de las sistemas de desarrollo Arduino UNO y ESP32.
-* Algunos conceptos basicos entre sensores y actuadores.
+* Conceptos básicos de programación de las sistemas de desarrollo Arduino UNO y ESP32.
+* Algunos conceptos básicos referentes a sensores y actuadores.
 * Comunicación serial.
-* Comunicación inalambrica usando Wifi.
-
-De los temas anteriormente vistos, es importante resaltar la importancia que juega la comunicación en una arquitectura IoT; asi mismo, que estas no son las unicas maneras de trabajar con datos, sin embargo, con saber por ahora esto basta.
+* Comunicación inalámbrica usando Wifi.
 
 Tal y como se muestra en la siguiente figura (tomada de IoT Engineering - [link](https://github.com/tamberg/fhnw-iot/tree/master/03))
 
 ![Iot-reference-model](img/Iot-reference-model.png)
 
-En el modelo de referencia IoT, uno de los elementos claves son las plataformas IoT pues permiten almacenar y almacenar (entre otras cosas) datos de sensores. Para conectar las cosas con estas plataformas con las cosas, es importante conocer la forma como se lleva a cabo la comunicación y la interación establecida por estas la cual, generalmente es a traves de peticiones HTTP expuestas a traves de APIs.
+En el modelo de referencia IoT, uno de los elementos claves son las plataformas IoT pues permiten adquirir y almacenar (entre otras cosas) datos de sensores. Para conectar las cosas con estas plataformas, es importante conocer la forma como se lleva a cabo la comunicación y la interacción entre estas la cual, generalmente es a través de peticiones HTTP expuestas a traves de APIs.
 
-Respecto al manejo de APIs, el siguiente documento se muestra un ejemplo tipico de un API ([cheatsheet_api](cheatsheet_api.pdf))
+Respecto al manejo de APIs, el siguiente documento se muestra un ejemplo típico de un API ([cheatsheet_api](cheatsheet_api.pdf))
 
 ## 1. APIs
 
-Una interfaz de programación de aplicaciones (API) permite una conversación de software con otra.  Utiliza interacciones basadas en la web o protocolos de comunicación comunes y sus propios estándares patentados determinando qué tipo de datos, servicios y funcionalidad expone la aplicación a terceros.
+Una interfaz de programación de aplicaciones (API) permite una conversación de software con otro. Utiliza interacciones basadas en la web o protocolos de comunicación comunes y sus propios estándares patentados determinando qué tipo de datos, servicios y funcionalidad expone la aplicación a terceros.
 
 ![API](img/api.png)
 
-Las API están diseñadas para ser consumidas mediante programación por otras aplicaciones y también pueden ser usadas por usuarios que desean interactuar con la aplicación manualmente. 
+Las API están diseñadas para ser consumidas mediante llamadas a funciones específicas por otras aplicaciones y también pueden ser usadas por usuarios que desean interactuar con la aplicación manualmente. 
 
 Los tres tipos más populares de estilos arquitectónicos API son:
 * RPC
@@ -46,7 +44,7 @@ A continuación vamos a analizar tanto las solicitudes como las respuestas.
 
 ### 2.1. Solicitudes de API REST
 
-Las solicitudes de API REST son solicitudes HTTP en las que una aplicación (cliente) pide al servidor que realice una función.  Las solicitudes de API REST se componen de cuatro componentes principales:
+Las solicitudes de API REST son solicitudes HTTP en las que una aplicación (cliente) pide al servidor que realice una función. Las solicitudes de API REST se componen de cuatro componentes principales:
 * **Identificador uniforme de recursos (URI)**: También conocido como **localizador uniforme de recursos (URL)**, identifica qué recurso desea manipular el cliente. 
   
   ![componentes-uri](img/componentes-uri.png)
@@ -57,7 +55,7 @@ Las solicitudes de API REST son solicitudes HTTP en las que una aplicación (cli
   * **Ruta de acceso**: representa la ubicación del recurso, los datos u objeto, que se va a manipular en el servidor. 
   * **Consulta**: proporciona detalles adicionales sobre el ámbito, el filtrado o para aclarar una solicitud. 
   
-* **Método HTTP:**: Empleado para comunicarse con los servicios web para los que se solicita la acción para el recurso dado. La asignación sugerida del método HTTP a la acción es la siguiente:
+* **Método HTTP**: Empleado para comunicarse con los servicios web para los que se solicita la acción para el recurso dado. La asignación sugerida del método HTTP a la acción es la siguiente:
   
   |Método HTTP:|Acción|Descripción|
   |---|---|---|
@@ -67,14 +65,14 @@ Las solicitudes de API REST son solicitudes HTTP en las que una aplicación (cli
   |PARCHE|Actualización parcial|Actualice algunos detalles de un recurso existente.|
   |DELETE|Eliminar (Delete)|Remover un recurso del sistema.|
 
-* **Encabezado**: tienen el formato de pares **```nombre-valor```** separados por dos puntos (**:**); esto es, ```[nombre]: [valor]```. Podemos distinguir dos tipos de encabezados:
+* **Encabezado**: Tienen el formato de pares **```nombre-valor```** separados por dos puntos (**:**); esto es, ```[nombre]: [valor]```. Podemos distinguir dos tipos de encabezados:
   *  **Encabezados de solicitud**: incluye información adicional que no esté relacionada con el contenido del mensaje.
   
      |Clave | Valor de ejemplo |Descripción |
      |---|---|---|
      |Autorización|DMFNCMFUDDP2YWDYYW básico|Proporciona credenciales para autorizar la solicitud|
 
-  *  **Encabezados de entidad**: información adicional que describe el contenido del cuerpo del mensaje.
+  *  **Encabezados de entidad**: Información adicional que describe el contenido del cuerpo del mensaje.
     
       |Clave | Valor de ejemplo |Descripción |
       |---|---|---|
@@ -86,11 +84,11 @@ Las solicitudes de API REST son solicitudes HTTP en las que una aplicación (cli
 
 Las respuestas de la API REST son respuestas HTTP que comunica los resultados de la solicitud HTTP de un cliente. La Respuesta REST API se componen de tres componentes principales:
 * **Estado HTTP**: El código de estado HTTP ayuda al cliente a determinar el motivo del error y a veces puede proporcionar sugerencias para solucionar el problema. Los códigos de estado HTTP constan de tres dígitos, donde el primer dígito es la categoría de respuesta y los otros dos dígitos son asignados en orden numérico. Hay cinco categorías diferentes de códigos de estado HTTP:
-   * **1xx - Informativo**: con fines informativos, las respuestas no contienen un cuerpo
-   * **2xx - Éxito**: el servidor recibió y ha aceptado la solicitud
-   * **3xx - Redirección**: el cliente tiene que tomar una acción adicional para completar la solicitud
-   * **4xx - Error de cliente**: la solicitud contiene un error como sintáxis incorrecta o entrada no válida
-   * **5xx - Error del servidor**: no se pueden cumplir las solicitudes válidas.
+   * **1xx - Informativo**: Con fines informativos, las respuestas no contienen un cuerpo
+   * **2xx - Éxito**: El servidor recibió y ha aceptado la solicitud
+   * **3xx - Redirección**: El cliente tiene que tomar una acción adicional para completar la solicitud
+   * **4xx - Error de cliente**: La solicitud contiene un error como sintáxis incorrecta o entrada no válida
+   * **5xx - Error del servidor**: No se pueden cumplir las solicitudes válidas.
  
     Los codigos de estado mas comunes se muestran a continuación:
 
@@ -107,14 +105,14 @@ Las respuestas de la API REST son respuestas HTTP que comunica los resultados de
     |503|El servicio no está disponible|No se puede cumplir la solicitud porque actualmente el servidor no puede manejar la solicitud|
 
 * **Encabezado**: El encabezado de la respuesta proporciona información adicional entre el servidor y el cliente en el formato de par **```nombre-valor```** que está separado por dos puntos (**:**), ```[nombre]:[valor]```. Hay dos tipos de encabezados: 
-   * **Encabezados de respuesta**: contiene información adicional que no está relacionada con el contenido del mensaje. Los encabezados de respuesta típicos para una solicitud de API REST incluyen:
+   * **Encabezados de respuesta**: Contiene información adicional que no está relacionada con el contenido del mensaje. Los encabezados de respuesta típicos para una solicitud de API REST incluyen:
     
      |Clave|Valor de ejemplo|Descripción|
      |---|---|---|
      |Set-Cookie|JSESSIONID=30A9DN810FQ428P; Ruta=/|Se utiliza para enviar Cookies desde el servidor|
      |Control de caché|Control de caché: max-edad=3600, público|Especificar directivas que DEBEN ser obedecidas por todos los mecanismos de almacenamiento en el caché|
 
-   * **Encabezados de entidad**: son información adicional que describe el contenido del cuerpo del mensaje. Un encabezado de entidad común especifica el tipo de datos que son devueltos:
+   * **Encabezados de entidad**: Son información adicional que describe el contenido del cuerpo del mensaje. Un encabezado de entidad común especifica el tipo de datos que son devueltos:
 
      |Clave|Valor de ejemplo|Descripción|
      |---|---|---|
