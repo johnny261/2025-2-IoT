@@ -3,7 +3,7 @@
 ## Finalidad
 
 El siguiente repositorio tiene como finalidad:
-1. Documentar lo que se hace a lo largo de las clases del semestre 2024/2
+1. Documentar lo que se hace a lo largo de las clases del semestre.
 2. Colocar actividades para su desarrollo a lo largo del semestre.
 3. Propiciar el trabajo colaborativo entre todos los miembros a lo largo del semestre.
 4. Fomentar el aprendizaje de nuevas cosas para aplicarlo en nuevas cosas.
