@@ -183,8 +183,7 @@ Para mayor información puede consultar:
 
 En todos los ejemplos anteriores, hemos visto el ESP32 funcionando como **Servidor**. A continuación veremos algunos ejemplos en los cuales el ESP32 toma un rol más activo cuando es un cliente.
 
-5. Este ejemplo utiliza un MCU como Servidor, leyendo un DHT11 y reportando sus valores a peticiones HTTP enviados desde un navegador.
-[link](https://github.com/bitwiseAr/Curso-Arduino-desde-cero/blob/master/RaspberryPiPico/Pico2W-DHT22-WebServer.txt)
+5. Este ejemplo utiliza un MCU como Servidor, leyendo un DHT11 y reportando sus valores a peticiones HTTP enviados desde un navegador ([link](https://github.com/bitwiseAr/Curso-Arduino-desde-cero/blob/master/RaspberryPiPico/Pico2W-DHT22-WebServer.txt)).
 
 A continuación se muestra el código, el cual se debe adaptar para usarlo con el ESP:
 
