@@ -16,9 +16,7 @@ La siguiente tabla muestra la lista de clases asociadas a esta sección:
 
 |Clase|Tema|Recursos|Observaciones|
 |---|---|---|---|
-|1|Introducción al IoT|[[link]](./clase1/)||
-|2|Redes y protocolos |[[link]](./clase2/)||
-
+|1|Introducción al IoT|||
 
 ### Capa de percepción
 
