@@ -183,6 +183,90 @@ Para mayor información puede consultar:
 
 En todos los ejemplos anteriores, hemos visto el ESP32 funcionando como **Servidor**. A continuación veremos algunos ejemplos en los cuales el ESP32 toma un rol más activo cuando es un cliente.
 
+5. Este ejemplo utiliza un MCU como Servidor, leyendo un DHT11 y reportando sus valores a peticiones HTTP enviados desde un navegador.
+[link](https://github.com/bitwiseAr/Curso-Arduino-desde-cero/blob/master/RaspberryPiPico/Pico2W-DHT22-WebServer.txt)
+
+A continuación se muestra el código, el cual se debe adaptar para usarlo con el ESP:
+
+```cpp
+#include <WiFi.h>
+#include <DHT.h>
+
+#define DHTPIN 15 
+#define DHTMODELO DHT22
+DHT dht(DHTPIN, DHTMODELO);
+
+const char* ssid = "tu_SSID";
+const char* password = "tu_PASSWORD";
+
+WiFiServer server(80);
+
+float temperatura = 0;
+float humedad = 0;
+
+unsigned long tiempoAnterior = 0;
+const long intervalo = 5000;
+
+void setup() {
+  Serial.begin(115200);
+  dht.begin(); 
+  
+  WiFi.begin(ssid, password);
+  while (WiFi.status() != WL_CONNECTED) {
+    delay(1000);
+    Serial.println("Conectando a WiFi");
+  }
+  Serial.println("Conectado correctamente");
+  Serial.print("IP: ");
+  Serial.println(WiFi.localIP());
+  
+  server.begin();
+}
+
+void loop() {
+  unsigned long tiempoActual = millis();
+  if (tiempoActual - tiempoAnterior >= intervalo) {
+    temperatura = dht.readTemperature();
+    humedad = dht.readHumidity();
+    tiempoAnterior = tiempoActual;
+  }
+  
+  WiFiClient cliente = server.accept();
+  if (cliente) {
+    String lineaActual = "";
+    while (cliente.connected()) {
+      if (cliente.available()) {
+        char c = cliente.read();
+        if (c == '\n' && lineaActual.length() == 0) {	
+          cliente.println("HTTP/1.1 200 OK");
+          cliente.println("Content-Type: text/html");
+          cliente.println();
+          cliente.println("<html>");
+          cliente.println("<head>");
+          cliente.println("<meta http-equiv=\"refresh\" content=\"10\">");
+          cliente.println("</head>");
+          cliente.println("<body>");
+          cliente.print("<h1>Temperatura: ");
+          cliente.print(temperatura, 1);
+          cliente.println(" &deg;C</h1>");
+          cliente.print("<h1>Humedad: ");
+          cliente.print(humedad, 1); 
+          cliente.println(" %</h1>");
+          cliente.println("</body>");
+          cliente.println("</html>");
+          break; 
+        } else if (c == '\n') {	
+          lineaActual = "";
+        } else if (c != '\r') {
+          lineaActual += c;
+        }
+      }
+    }
+    cliente.stop();
+  }
+}
+```
+
 ## 5. Enlaces
 
 * https://docs.espressif.com/projects/esp-idf/en/latest/esp32/
