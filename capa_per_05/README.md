@@ -15,7 +15,7 @@ Antes de empezar a trabajar recuerde el proceso de desarrollo para la plataforma
 
 ## 2. Arduino core for the ESP32
 
-El ESP32 es una evolución del ESP8266. En el laboratorio se cuentan con varios modulos. La siguiente lista resalta algunas referencias de utilidad relacionadas con el ESP32:
+El ESP32 es una evolución del ESP8266. En el laboratorio se cuentan con varios módulos. La siguiente lista resalta algunas referencias de utilidad relacionadas con el ESP32:
 * **ESP32 - Pagina del fabricante** ([link](https://www.espressif.com/en/products/socs/esp32))
 * **ESP-IDF Programming Guide** ([link](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/))
 * **Arduino core for the ESP32** ([link](https://espressif.github.io/arduino-esp32/))
