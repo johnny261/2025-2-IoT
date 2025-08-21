@@ -1,88 +1,45 @@
-# Basic Components of an IoT System
+# Implementing a Thing
 
 ## Objectives
 
->* Make the first tests with the ESP32 development board  
->* Use simple circuits and programs with an online simulator for the platform  
+>* Review the basic components of an IoT system
+>* Explore the basic components that make up the concept of a "thing".
+>* Perform the first tests with the ESP32 development board
+>* Investigate the development systems available in the laboratory.
 
 ## Main References
 
-1. Lesson 2 **A deeper dive into IoT** ([link](https://github.com/microsoft/IoT-For-Beginners/blob/main/1-getting-started/lessons/2-deeper-dive/README.md)) from Microsoft’s **IoT for Beginners** course [[link](https://github.com/microsoft/IoT-For-Beginners)]
-2. Lesson 3 **Interact with the physical world** ([link](https://github.com/microsoft/IoT-For-Beginners/blob/main/1-getting-started/lessons/3-sensors-and-actuators/README.md)) from Microsoft’s **IoT for Beginners** ([link](https://github.com/microsoft/IoT-For-Beginners)).
+1. Lesson 2 **A deeper dive into IoT** ([link](https://github.com/microsoft/IoT-For-Beginners/blob/main/1-getting-started/lessons/2-deeper-dive/README.md)) from the Microsoft course **IoT for Beginners** [[link](https://github.com/microsoft/IoT-For-Beginners)]
+2. Lesson 3 **Interact with the physical world** ([link](https://github.com/microsoft/IoT-For-Beginners/blob/main/1-getting-started/lessons/3-sensors-and-actuators/README.md)) from Microsoft’s **IoT for Beginners** course ([link](https://github.com/microsoft/IoT-For-Beginners)).
 
-## Online Simulators
+## 0. Arduino IDE Configuration
+1. Go to this [link](https://www.arduino.cc/en/software), download and install the software.
 
-The following is a list of applications that will be used for simulation purposes. To use them, just have a Google email account, for example:
-- [x] Tinkercad (https://www.tinkercad.com/)
-- [x] Wokwi (https://wokwi.com/)
+2. Once installed, go to File -> Preferences -> Manage additional boards and insert this link into the box:
 
-## Classroom Work
+[https://espressif.github.io/arduino-esp32/package_esp32_index.json](https://espressif.github.io/arduino-esp32/package_esp32_index.json)
 
-## 1. Development Systems
+This step is necessary for the IDE to recognize the boards developed for the ESP32.
 
-The heart of IoT systems is the things. They are responsible for enabling the system’s interaction with the environment by collecting, processing data, and performing control actions over it.  
+![Arduino ESP32 Configuration](img/Arduino-Prefs.png)
 
-To carry out prototyping tasks, development systems (dev kits) are used, which are of two types *Microcontrollers* and *Single Board Computers* as shown in the following figure:
+3. Install the ESP32 boards in the Arduino IDE.  
+   1. Select Boards, 2. Search for "esp", 3. Install them.
 
-![dev_kits](img/dev_kids.png)
+![ESP32 boards installation](img/ESP32-boards.png) 
 
-### Systems available in the laboratory
+4. In the Arduino IDE, look for the appropriate board for your microcontroller using the menu:
 
-Below is a list of some development systems. Those available in the laboratory are marked.
+Tools -> Boards -> ESP32
 
-#### Microcontrollers
+5. Connect the microcontroller to the computer. The computer should recognize it as a COMxx port (in Windows) or a /dev/ttySxx port (in Linux).
 
-- [x] Arduino UNO 
-- [x] ESP8266 
-- [x] ESP32 
-- [x] ARDUINO NANO 33 BLE Sense Lite
+6. In the Arduino IDE, look for the correct port for your microcontroller using the menu:
 
-#### Single Board Computers
+Tools -> Port -> \[Choose the port here\]
 
-- [x]  Raspberry Pi [[link]](https://www.raspberrypi.com/) 
-- [ ]  BeagleBoard [[link]](https://www.beagleboard.org/) 
-- [ ]  Orange Pi [[link]](http://www.orangepi.org/)  
-- [ ]  Banana Pi [[link]](https://www.banana-pi.org/)  
-- [ ]  Intel Galileo [[link]](https://ark.intel.com/content/www/us/en/ark/products/78919/intel-galileo-board.html)
+![Port Configuration](img/Arduino-Port.png)
 
-> **To go deeper** <br>
-> To learn more about these elements available in the laboratory check the following [link](https://udea-iot.github.io/UdeA_IoT-page/docs/sesiones/percepcion/sesion2)
+6. Insert the code from the image, compile the code (1), upload the program to the microcontroller (2), and open the serial monitor (3).
 
-## 2. Development environment configuration for microcontrollers
-
-### Arduino framework
-
-To program a microcontroller, some tools are needed to develop the software that will run on the microcontroller (firmware). Due to the large number of existing microcontrollers, each manufacturer offers a framework to facilitate the development of applications for any compatible microcontroller.  
-
-Due to its popularity and ease of use, in this course we will use the Arduino Framework. Arduino is an open-source electronics platform that combines hardware and software, making it ideal for programming not only Arduino boards, but also boards from other manufacturers using the programming model employed in Arduino.  
-
-In this model, the boards are programmed in C or C++ using a code file known as a **sketch** ([link](https://github.com/microsoft/IoT-For-Beginners/blob/main/1-getting-started/lessons/2-deeper-dive/README.md)):
-
-![arduino-skech](img/arduino-sketch.png)
-
-The **sketch** consists of two main functions (see figure taken from the following [link](https://github.com/microsoft/IoT-For-Beginners/blob/main/1-getting-started/lessons/2-deeper-dive/README.md)):
-* **`setup`**: Initialization code (port initialization, Wi-Fi connection, cloud services, etc.) that runs when the microcontroller is powered on. 
-* **`loop`**: Code that runs continuously while the microcontroller is on. This is where the application logic is implemented (sensor reading, actuator control, sending and receiving information, etc).
-
-Below is a typical code template:
-
-```cpp
-// Project Name
-// Description: Brief description of the project and its functionality
-
-// Include necessary libraries
-#include <Arduino.h>
-
-// Define constants and pin assignments
-
-// Global variables
-
-void setup() {
-    // Initial setup
-    // code...
-}
-
-void loop() {
-    // Code that runs repeatedly
-    // code...
-}
+![Serial Test](img/Arduino-TestSerial.png)
