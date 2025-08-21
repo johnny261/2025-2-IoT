@@ -123,11 +123,11 @@ To set up the following examples follow the steps described on the page **First 
 
 **Schematic**:
 
-![esquematico](img/example1/ESP32-blink_sch.png)
+![esquematico](example1/ESP32-blink_sch.png)
 
 **Wiring Diagram**:
 
-![breakboard](img/example1/ESP32-blink_bb.png)
+![breakboard](example1/ESP32-blink_bb.png)
 
 
 **Code**:
