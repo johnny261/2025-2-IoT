@@ -124,11 +124,11 @@ Para montar los siguientes ejemplos siga los pasos descritos la pagina **Primero
 
 **Esquematico**:
 
-![esquematico](img/example1/ESP32-blink_sch.png)
+![esquematico](example1/ESP32-blink_sch.png)
 
 **Diagrama de conexión**:
 
-![breakboard](img/example1/ESP32-blink_bb.png)
+![breakboard](example1/ESP32-blink_bb.png)
 
 
 **Código**:
@@ -255,3 +255,4 @@ void loop() {
 * https://github.com/microsoft/Web-Dev-For-Beginners
 * https://github.com/microsoft/ai-for-beginners
 * https://github.com/microsoft/Data-Science-For-Beginners
+
