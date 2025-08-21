@@ -1,4 +1,4 @@
-Fcheat# Basic Components of an IoT System
+# Basic Components of an IoT System
 
 ## Objectives
 
