@@ -1,4 +1,4 @@
-# Basic Components of an IoT System
+Fcheat# Basic Components of an IoT System
 
 ## Objectives
 
@@ -102,7 +102,7 @@ Before getting started, have a pinout diagram for the ESP32 at hand as shown bel
 ![ESP32](img/ESP32_dev-kit.jpg)
 
 Likewise, keep the following resources on hand for quick reference:
-- [x] Arduino cheat sheet ([link](https://www.cheat-sheets.org/saved-copy/Arduino-cheat-sheet-v02c.pdf)
+- [x] Arduino cheat sheet ([link](https://www.cheat-sheets.org/saved-copy/Arduino-cheat-sheet-v02c.pdf))
 - [X] Arduino Language Reference ([link](https://www.arduino.cc/reference/en/))
   
   ![arduino-ref](img/arduino-reference.png)
