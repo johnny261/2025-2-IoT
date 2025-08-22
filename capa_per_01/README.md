@@ -61,8 +61,8 @@ In this model, boards are programmed in C or C++ through a code file known as a 
 ![arduino-skech](img/arduino-sketch.png)
 
 The **sketch** consists of two main functions (see figure taken from the following [link](https://github.com/microsoft/IoT-For-Beginners/blob/main/1-getting-started/lessons/2-deeper-dive/README.md)):
-* **`setup`**: Initialization code (port initialization, Wi-Fi connection, cloud services, etc.) that runs when the microcontroller is powered on.
-* **`loop`**: Code that runs continuously while the microcontroller is on. This is where the application logic is implemented (reading sensors, controlling actuators, sending and receiving information, etc.).
+* **`setup`**: Initialization code (port initialization, Wi-Fi connection, cloud services, etc.) that runs one time when the microcontroller is powered on.
+* **`loop`**: Code that runs continuously (forever loop) while the microcontroller is on. This is where the application logic is implemented (reading sensors, controlling actuators, sending and receiving information, etc.).
 
 Below is a typical code template:
 
