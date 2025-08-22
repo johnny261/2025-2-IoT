@@ -141,6 +141,7 @@ Tools -> Port -> \[Choose your port here\]
 
 ![Port configuration](img/Arduino-TestSerial.png)
 
+### Application examples
 
 #### Example 1
 
