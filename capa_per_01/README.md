@@ -109,6 +109,39 @@ Likewise, keep the following resources on hand for quick reference:
 
 To set up the following examples follow the steps described on the page **First steps with PlatformIO** ([link](./plaftormio_tutorial))
 
+### Arduino IDE configuration
+
+1. Go to this [link](https://www.arduino.cc/en/software) download and install the software. 
+
+2. Once installed go to File -> Preferences -> Manage Additional Cards and insert this link into the box.
+
+[https://espressif.github.io/arduino-esp32/package_esp32_index.json](https://espressif.github.io/arduino-esp32/package_esp32_index.json)
+
+This step is necessary for the IDE to recognize the cards developed for the ESP32.
+
+![Arduino configuration with ESP32](img/Arduino-Prefs.png)
+
+3. Install the ESP32 boards in the Arduino IDE. 1. Select boards, 2. Search for "esp", 3. Install them.
+
+![ESP32 cards installation](img/ESP32-boards.png) 
+
+4. In the Arduino IDE, find the appropriate board for your microcontroller using the menu:
+
+Tools -> Cards -> ESP32
+
+5. Connect the microcontroller to the computer, the computer should recognize this micro as a COMxx port (in Windows) or a /dev/ttySxx port (in Linux)
+
+6. In the Arduino IDE, find the appropriate board for your microcontroller using the menu:
+
+Tools -> Port -> \[Choose your port here\]
+
+![Port configuration](img/Arduino-Port.png)
+
+6. Insert the code from the image, compile the code (1) download the program to the microcontroller (2) and open the serial monitor (3)
+
+![Port configuration](img/Arduino-TestSerial.png)
+
+
 #### Example 1
 
 **Description**: The following application shows turning an LED on and off at a frequency of 1Hz.
