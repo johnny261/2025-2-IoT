@@ -1,4 +1,4 @@
-# IoT Course Repository (2025/2)
+# IoT Course Repository
 
 ## Purpose
 
