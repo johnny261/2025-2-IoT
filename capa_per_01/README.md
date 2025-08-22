@@ -33,9 +33,9 @@ Below is a list of some development systems. Those available in the laboratory a
 #### Microcontrollers
 
 - [x] Arduino UNO
-- [x] ESP8266
 - [x] ESP32
 - [x] ARDUINO NANO 33 BLE Sense Lite
+- [x] ESP8266 (Really a little bit old)
 
 #### Single-board computers
 
