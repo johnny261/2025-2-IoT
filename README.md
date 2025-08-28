@@ -22,10 +22,10 @@ The following table shows the list of classes associated with this section:
 
 |Class|Topic|Resources|Remarks|
 |---|---|---|---|
-|3|Perception layer 01|[[link]](./capa_per_01/)||
-|4|Perception layer 02|[[link]](./capa_per_02/)||
-|5|Perception layer 03|[[link]](./capa_per_03/)||
-|6|Perception layer 04|[[link]](./capa_per_04/)||
-|7|Perception layer 05|[[link]](./capa_per_05/)||
+|3|Processing units|[[link]](./01_Processors/)||
+|4|Sensors 02|[[link]](./02_Sensors/)||
+|5|Framework 03|[[link]](./capa_per_03/)||
+|6|Control strategies layer 04|[[link]](./capa_per_04/)||
+|7|Connectivity 05|[[link]](./capa_per_05/)||
 
 
