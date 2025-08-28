@@ -15,12 +15,12 @@ The following repository has the following purposes:
 The following table shows the list of classes associated with this section:
 
 |Class|Topic|Resources|
-|---|---|---|---|
+|---|---|---|
 |1|Introduction to IoT||
 
 ### Perception Layer
 
-|Class|Topic|Resources|Remarks|
+|Class|Topic|Resources|
 |---|---|---|
 |3|Processing units|[[link]](./01_Processors/)|
 |4|Sensors 02|[[link]](./02_Sensors/)|
