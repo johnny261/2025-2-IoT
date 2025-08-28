@@ -14,18 +14,18 @@ The following repository has the following purposes:
 
 The following table shows the list of classes associated with this section:
 
-|Class|Topic|Resources|Remarks|
+|Class|Topic|Resources|
 |---|---|---|---|
-|1|Introduction to IoT|||
+|1|Introduction to IoT||
 
 ### Perception Layer
 
 |Class|Topic|Resources|Remarks|
-|---|---|---|---|
-|3|Processing units|[[link]](./01_Processors/)||
-|4|Sensors 02|[[link]](./02_Sensors/)||
-|5|Framework 03|[[link]](./capa_per_03/)||
-|6|Control strategies layer 04|[[link]](./capa_per_04/)||
-|7|Connectivity 05|[[link]](./capa_per_05/)||
+|---|---|---|
+|3|Processing units|[[link]](./01_Processors/)|
+|4|Sensors 02|[[link]](./02_Sensors/)|
+|5|Framework 03|[[link]](./capa_per_03/)|
+|6|Control strategies layer 04|[[link]](./capa_per_04/)|
+|7|Connectivity 05|[[link]](./capa_per_05/)|
 
 
