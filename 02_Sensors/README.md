@@ -7,11 +7,6 @@
 >* Perform initial tests with the ESP32 development board.
 >* Research the development systems available in the lab.
 
-## Main references
-
-1. Lesson 2 **A deeper dive into IoT** ([link](https://github.com/microsoft/IoT-For-Beginners/blob/main/1-getting-started/lessons/2-deeper-dive/README.md)) form Microsoft's **IoT for Beginners** [[link](https://github.com/microsoft/IoT-For-Beginners)]
-2. Lesson 3 **Interact with the phisycal world** ([link](https://github.com/microsoft/IoT-For-Beginners/blob/main/1-getting-started/lessons/3-sensors-and-actuators/README.md)) from Microsoft's **IoT for Beginners** ([link](https://github.com/microsoft/IoT-For-Beginners)).
-
 ## Basic components of the Things
 
 Within the context of the Internet of Things (IoT), a "thing" refers to any physical device that is connected to the network and can interact with other devices, systems, or services.
@@ -578,6 +573,9 @@ Explore the following sites to get an idea of what can be done:
 
 ## References
 
+* https://randomnerdtutorials.com/vs-code-platformio-ide-esp32-esp8266-arduino
+* https://github.com/microsoft/IoT-For-Beginners/blob/main/1-getting-started/lessons/3-sensors-and-actuators/README.md
+* https://github.com/microsoft/IoT-For-Beginners.
 * https://how2electronics.com/10-essential-iot-starter-kits-to-kickstart-your-journey/
 * https://github.com/UdeA-IoT/actividad-4
 * https://udea-iot.github.io/UdeA_IoT-page/docs/sensores-actuadores/sensores/intro
