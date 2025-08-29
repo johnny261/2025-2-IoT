@@ -184,6 +184,8 @@ Now, click on the Serial Monitor icon and you should see it printing the current
 
 ![PIO15](img/PlatformIO-15.webp)
 
+Instead, if you want to read an analog signal, follow the example avaliable [here](#444-reading-an-analog-input-link).
+
 # 3. Installing third-party libraries on PlatformIO
 
 Click the Home icon to go to PlatformIO Home. Click on the Libraries icon on the left side bar. Search for the library you want to install. For example *Adafruit BME280*.
