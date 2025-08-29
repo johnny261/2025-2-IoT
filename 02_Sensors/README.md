@@ -579,11 +579,6 @@ Explore the following sites to get an idea of what can be done:
 * https://github.com/UdeA-IoT/actividad-4
 * https://udea-iot.github.io/UdeA_IoT-page/docs/sensores-actuadores/sensores/intro
 * https://gist.github.com/lyqht
-* https://github.com/microsoft/IoT-For-Beginners
-* https://github.com/microsoft/ML-For-Beginners
-* https://github.com/microsoft/Web-Dev-For-Beginners
-* https://github.com/microsoft/ai-for-beginners
-* https://github.com/microsoft/Data-Science-For-Beginners
 * https://digitalconcepts.net.au/fritzing/index.php?op=parts
 * https://www.studiopieters.nl/fritzing/
 * https://codeadam.ca
