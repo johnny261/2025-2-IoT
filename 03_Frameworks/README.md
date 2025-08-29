@@ -1,4 +1,4 @@
-# Frameworks & RTOS
+# Frameworks & plugins
 
 ## Objectives
 
