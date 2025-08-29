@@ -23,9 +23,9 @@ The following table shows the list of classes associated with this section:
 |Class|Topic|Resources|
 |---|---|---|
 |3|Processing units|[[link]](./01_Processors/)|
-|4|Sensors 02|[[link]](./02_Sensors/)|
-|5|Framework 03|[[link]](./capa_per_03/)|
+|4|Sensors|[[link]](./02_Sensors/)|
+|5|Framework|[[link]](./capa_per_03/)|
 |6|Control strategies layer 04|[[link]](./capa_per_04/)|
-|7|Connectivity 05|[[link]](./capa_per_05/)|
+|7|Connectivity|[[link]](./capa_per_05/)|
 
 
