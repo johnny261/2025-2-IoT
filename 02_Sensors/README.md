@@ -575,7 +575,6 @@ Explore the following sites to get an idea of what can be done:
 
 * https://randomnerdtutorials.com/vs-code-platformio-ide-esp32-esp8266-arduino
 * https://github.com/microsoft/IoT-For-Beginners/blob/main/1-getting-started/lessons/3-sensors-and-actuators/README.md
-* https://github.com/microsoft/IoT-For-Beginners.
 * https://how2electronics.com/10-essential-iot-starter-kits-to-kickstart-your-journey/
 * https://github.com/UdeA-IoT/actividad-4
 * https://udea-iot.github.io/UdeA_IoT-page/docs/sensores-actuadores/sensores/intro
