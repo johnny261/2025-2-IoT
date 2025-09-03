@@ -222,14 +222,14 @@ Sensors and actuators are how things interact with their surroundings. There are
   | 2   | DS18B20 Temperature Sensor Module      | sensor   |
   | 3   | Button switch module                   | sensor   |
   | 4   | Tilt Switch module                     | sensor   |
-  | 5   | IR Transmitter Module                  | actuador |
+  | 5   | IR Transmitter Module                  | actuator |
   | 6   | IR Receiver Module                     | sensor   |
-  | 7   | Seven-Color flash Module               | actuador |
-  | 8   | Passive Buzzer                         | actuador |
-  | 9   | Active Buzzer                          | actuador |
-  | 10  | Laser Module                           | actuador |
-  | 11  | RGB LED Module                         | actuador |
-  | 12  | SMD RGB LED Module                     | actuador |
+  | 7   | Seven-Color flash Module               | actuator |
+  | 8   | Passive Buzzer                         | actuator |
+  | 9   | Active Buzzer                          | actuator |
+  | 10  | Laser Module                           | actuator |
+  | 11  | RGB LED Module                         | actuator |
+  | 12  | SMD RGB LED Module                     | actuator |
   | 13  | Photo Interrupter Module               | sensor   |
   | 14  | Two Color LED Module (5mm)             | actuador |
   | 15  | Light Dependent Resistor Module        | sensor   |
@@ -240,13 +240,13 @@ Sensors and actuators are how things interact with their surroundings. There are
   | 20  | Linear Magnetic Hall Sensor            | sensor   |
   | 21  | Flame Sensor Module                    | sensor   |
   | 22  | Touch Sensor                           | sensor   |
-  | 23  | Seven Color flash Module               | actuador |
+  | 23  | Seven Color flash Module               | actuator |
   | 24  | Joystick Module                        | sensor   |
   | 25  | Line Tracking Module                   | sensor   |
   | 26  | Obstacle Avoidance Sensor              | sensor   |
   | 27  | Rotary Encode Module                   | sensor   |
-  | 28  | Relay Module                           | actuador |
-  | 29  | LCD display                            | actuador |
+  | 28  | Relay Module                           | actuator |
+  | 29  | LCD display                            | actuator |
   | 30  | Ultrasonic Sensor Module               | sensor   |
   | 31  | MPU 6050 Module                        | sensor   |
   | 32  | HC SR501 PIR Sensor                    | sensor   |
