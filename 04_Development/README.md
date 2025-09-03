@@ -124,7 +124,7 @@ void fsm_process()
 ```
 ### Example # 2
 
-Let's read a DTH11 sensor, available in the kit provided in the laboratory. Lets implement this FSM:
+Let's read a DTH11 sensor, available in the kit provided in the laboratory. Lets implement this FSM (**remember to include DHT11 library, as we saw in the last session**):
 
 ![fsm_dht11](img/fsm_dht11.png)
 
