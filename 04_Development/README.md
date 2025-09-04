@@ -241,6 +241,12 @@ void fsm_process()
 }
 ```
 
+## Embedded Operating System
+
+An *Embedded Operating System (EOS)* is a piece of firmware useful to manage multiple tasks inside a microcontroller. Some of the most used EOS's are: Embedded linux, Free Real-Time OS, TinyOS, ThreadX and mbedOS.
+
+We are going to explore a little bit of FreeRTOS, because is free, open and has been ported to a lot of plattforms (ESP32 included).
+
 ## Main References
 
 1. Lesson 2 **A deeper dive into IoT** ([link](https://github.com/microsoft/IoT-For-Beginners/blob/main/1-getting-started/lessons/2-deeper-dive/README.md)) from Microsoft’s **IoT for Beginners** course [[link](https://github.com/microsoft/IoT-For-Beginners)]
