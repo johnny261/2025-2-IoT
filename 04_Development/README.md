@@ -271,21 +271,24 @@ The FreeRTOS real-time operating system is built into the ESP32 and integrated i
 This example uses 2 leds to blink them at different rates. **How would you do this application in the normal way?**
 
 ```cpp
+#include <Arduino.h>
+
 #define LED_PIN 2
+#define RTOS_delay(x) vTaskDelay(x / portTICK_PERIOD_MS)
 
 // Declare task handle
 TaskHandle_t BlinkTaskHandle = NULL;
 
 void BlinkTask(void *parameter)
 {
-  for (;;)
-  { // Infinite loop
+  for (;;) // Infinite loop
+  {
     digitalWrite(LED_PIN, HIGH);
     Serial.println("BlinkTask: LED ON");
-    vTaskDelay(1000 / portTICK_PERIOD_MS); // 1000ms
+    RTOS_delay(1000);
     digitalWrite(LED_PIN, LOW);
     Serial.println("BlinkTask: LED OFF");
-    vTaskDelay(1000 / portTICK_PERIOD_MS);
+    RTOS_delay(1000);
     Serial.print("BlinkTask running on core ");
     Serial.println(xPortGetCoreID());
   }
@@ -312,17 +315,20 @@ void loop() {
 }
 ```
 
-### Suspending and resuming tasks
+## Suspending and resuming tasks
 
 Task can wait for other tasks or routines in the microcontroller.
 
-## FreeRTOS example # 2
+### FreeRTOS example # 2
 
 The following code listens to the press of a pushbutton to either suspend or resume the blinking FreeRTOS task.
 
 ```cpp
+#include <Arduino.h>
+
 #define LED1_PIN 2
 #define BUTTON_PIN 23
+#define RTOS_delay(x) vTaskDelay(x / portTICK_PERIOD_MS)
 
 // Task handle
 TaskHandle_t BlinkTaskHandle = NULL;
@@ -362,12 +368,12 @@ void BlinkTask(void *parameter)
   {
     digitalWrite(LED1_PIN, HIGH);
     Serial.println("BlinkTask: LED ON");
-    vTaskDelay(1000 / portTICK_PERIOD_MS); // 1000ms
+    RTOS_delay(1000);
     digitalWrite(LED1_PIN, LOW);
     Serial.println("BlinkTask: LED OFF");
     Serial.print("BlinkTask running on core ");
     Serial.println(xPortGetCoreID());
-    vTaskDelay(1000 / portTICK_PERIOD_MS);
+    RTOS_delay(1000);
   }
 }
 
