@@ -421,7 +421,8 @@ TaskHandle_t Task2Handle = NULL;
 void Task1(void *parameter)
 {
   pinMode(LED1_PIN, OUTPUT);
-  for (;;) {
+  for (;;)
+  {
     digitalWrite(LED1_PIN, HIGH);
     Serial.println("Task1: LED1 ON");
     RTOS_delay(1000);
