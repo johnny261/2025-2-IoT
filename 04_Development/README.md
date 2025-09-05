@@ -247,7 +247,71 @@ An *Embedded Operating System (EOS)* is a piece of firmware useful to manage mul
 
 We are going to explore a little bit of FreeRTOS, because is free, open and has been ported to a lot of plattforms (ESP32 included).
 
-## Main References
+### FreeRTOS and ESP32
 
-1. Lesson 2 **A deeper dive into IoT** ([link](https://github.com/microsoft/IoT-For-Beginners/blob/main/1-getting-started/lessons/2-deeper-dive/README.md)) from Microsoft’s **IoT for Beginners** course [[link](https://github.com/microsoft/IoT-For-Beginners)]
-2. Lesson 3 **Interact with the physical world** ([link](https://github.com/microsoft/IoT-For-Beginners/blob/main/1-getting-started/lessons/3-sensors-and-actuators/README.md)) from Microsoft’s **IoT for Beginners** ([link](https://github.com/microsoft/IoT-For-Beginners)) by Microsoft.
+The FreeRTOS real-time operating system is built into the ESP32 and integrated into the Espressif IDF and the Arduino core. It supports:
+
+- **Task Management**: create, suspend, resume, or delete tasks (covered in this tutorial).
+- **Scheduling**: allows you to give priority to your tasks, so they run in a specific order (covered in this tutorial).
+- **Inter-Task Communication**: using things like queues, semaphores, and mutexes, we can ensure seamless communication between tasks without crashing the ESP32.
+- **Dual-Core Support**: it allows you to run your tasks on either core 0 or core 1 of the ESP32.
+
+### Basic concepts
+
+- **Tasks**: tasks are independent functions running concurrently, each with its own stack (memory usage allocated) and priority. Tasks can be in states like Running, Ready, Blocked, or Suspended.
+- **Scheduler**: the scheduler decides which tasks to run based on their priorities. This is a preemptive scheduler, which means it can interrupt a lower-priority task at any time to run a higher-priority one, ensuring that critical tasks are executed as soon as they’re ready.
+- **Priorities**: higher numbers indicate higher priority (for example: 1 = low, 5 = high).
+
+### FreeRTOS example # 1
+
+This example uses 2 leds to blink them at different rates. **How would you do this application in the normal way?**
+
+```Arduino
+#define LED_PIN 2
+
+// Declare task handle
+TaskHandle_t BlinkTaskHandle = NULL;
+
+void BlinkTask(void *parameter) {
+  for (;;) { // Infinite loop
+    digitalWrite(LED_PIN, HIGH);
+    Serial.println("BlinkTask: LED ON");
+    vTaskDelay(1000 / portTICK_PERIOD_MS); // 1000ms
+    digitalWrite(LED_PIN, LOW);
+    Serial.println("BlinkTask: LED OFF");
+    vTaskDelay(1000 / portTICK_PERIOD_MS);
+    Serial.print("BlinkTask running on core ");
+    Serial.println(xPortGetCoreID());
+  }
+}
+
+void setup() {
+  Serial.begin(115200);
+  
+  pinMode(LED_PIN, OUTPUT);
+
+  xTaskCreatePinnedToCore(
+    BlinkTask,         // Task function
+    "BlinkTask",       // Task name
+    10000,             // Stack size (bytes)
+    NULL,              // Parameters
+    1,                 // Priority
+    &BlinkTaskHandle,  // Task handle
+    1                  // Core 1
+  );
+}
+
+void loop() {
+  // Empty because FreeRTOS scheduler runs the task
+}
+```
+
+### Multitasking
+
+Multitasking refers to the capacity of the MCU to attend different applications "at the same time", as we usually do in when we use a computer.
+
+A FreeRTOS task is contained inside a function thta has a *setup()* and *loop()* stages. FreeRTOS mission is to execute all tasks in a way they allow the execution of other tasks.
+
+## References
+
+1. FreeRTOS tutorial  ([link](https://randomnerdtutorials.com/esp32-freertos-arduino-tasks)).
