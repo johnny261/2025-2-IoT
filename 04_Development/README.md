@@ -306,11 +306,9 @@ void loop() {
 }
 ```
 
-### Multitasking
+### Suspending and resuming tasks
 
-Multitasking refers to the capacity of the MCU to attend different applications "at the same time", as we usually do in when we use a computer.
-
-A FreeRTOS task is contained inside a function thta has a *setup()* and *loop()* stages. FreeRTOS mission is to execute all tasks in a way they allow the execution of other tasks.
+Task can wait for other tasks or routines in the microcontroller.
 
 ## FreeRTOS example # 2
 
@@ -387,6 +385,12 @@ void loop() {
   // Empty because FreeRTOS scheduler runs the task
 }
 ```
+
+### Multitasking
+
+Multitasking refers to the capacity of the MCU to attend different applications "at the same time", as we usually do in when we use a computer.
+
+A FreeRTOS task is contained inside a function thta has a *setup()* and *loop()* stages. FreeRTOS mission is to execute all tasks in a way they allow the execution of other tasks.
 
 ## References
 
