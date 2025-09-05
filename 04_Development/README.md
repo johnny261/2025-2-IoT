@@ -28,7 +28,7 @@ Let's make a simple semaphore controller using FSM methodology, the state diagra
 
 The code should look similar to this:
 
-```Arduino
+```arduino
 #include <Arduino.h>
 
 // Pins for leds and button
@@ -130,7 +130,7 @@ Let's read a DTH11 sensor, available in the kit provided in the laboratory. Lets
 
 The code should be similar to this one:
 
-```Arduino
+```arduino
 #include <Arduino.h>
 #include "DHT.h"
 
@@ -266,7 +266,7 @@ The FreeRTOS real-time operating system is built into the ESP32 and integrated i
 
 This example uses 2 leds to blink them at different rates. **How would you do this application in the normal way?**
 
-```Arduino
+```arduino
 #define LED_PIN 2
 
 // Declare task handle
@@ -314,7 +314,7 @@ Task can wait for other tasks or routines in the microcontroller.
 
 The following code listens to the press of a pushbutton to either suspend or resume the blinking FreeRTOS task.
 
-```Arduino
+```arduino
 #define LED1_PIN 2
 #define BUTTON_PIN 23
 
