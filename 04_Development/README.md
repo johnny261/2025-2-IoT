@@ -74,11 +74,11 @@ void fsm_process()
   switch (curr_state)
   {
     case ST_GREEN:
-        digitalWrite(L_Y, 1);
+        digitalWrite(L_G, 1);
         digitalWrite(L_Y, 0);
         digitalWrite(L_R, 0);
 
-        if (tnow - tbefore >= green_interval || digitalRead(BUT) == 0) {
+        if (tnow - tbefore >= green_interval && digitalRead(BUT) == 1) {
           curr_state = ST_YELLOW;
           tbefore = tnow;
           Serial.println("Changed to YELLOW!");
