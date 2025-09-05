@@ -242,7 +242,12 @@ void fsm_process()
 
 ## Embedded Operating System
 
-An *Embedded Operating System (EOS)* is a piece of firmware useful to manage multiple tasks inside a microcontroller. Some of the most used EOS's are: Embedded linux, Free Real-Time OS, TinyOS, ThreadX and mbedOS.
+An *Embedded Operating System (EOS)* is a piece of firmware useful to manage multiple tasks inside a microcontroller. Some of the most used EOS's are: 
+- [Embedded linux](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwja64uPocKPAxWeSzABHRCOG-sQFnoECAwQAQ&url=https%3A%2F%2Fwww.arm.com%2Fresources%2Feducation%2Fonline-courses%2Fembedded-linux&usg=AOvVaw0o9L11pSUVm5cFFEAZZ3ng&opi=89978449)
+- [TinyOS](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwjNjt3uoMKPAxWTSjABHTarLvAQFnoECCgQAQ&url=https%3A%2F%2Fgithub.com%2Ftinyos&usg=AOvVaw28C92S_yasJxnNMxhHUjJM&opi=89978449)
+- [ThreadX](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwivrZHfoMKPAxVYSjABHSCRATwQFnoECDYQAQ&url=https%3A%2F%2Fgithub.com%2Feclipse-threadx%2Fthreadx&usg=AOvVaw2Lk97SKKqllfcy7OvC0wMy&opi=89978449)
+- [mbedOS](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwj3hd-moMKPAxX2SjABHQkOBLcQFnoECA4QAQ&url=https%3A%2F%2Fos.mbed.com%2Fmbed-os%2F&usg=AOvVaw0n_npwa0c01oi9DZD7Le_-&opi=89978449)
+- [Free Real-Time OS](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwivqaaiocKPAxULSTABHbmLM9wQFnoECBYQAQ&url=https%3A%2F%2Fwww.freertos.org%2F&usg=AOvVaw1rceblHUTFrkSo3at3b_bR&opi=89978449)
 
 We are going to explore a little bit of FreeRTOS, because is free, open and has been ported to a lot of plattforms (ESP32 included).
 
@@ -250,16 +255,16 @@ We are going to explore a little bit of FreeRTOS, because is free, open and has 
 
 The FreeRTOS real-time operating system is built into the ESP32 and integrated into the Espressif IDF and the Arduino core. It supports:
 
-- **Task Management**: create, suspend, resume, or delete tasks (covered in this tutorial).
-- **Scheduling**: allows you to give priority to your tasks, so they run in a specific order (covered in this tutorial).
-- **Inter-Task Communication**: using things like queues, semaphores, and mutexes, we can ensure seamless communication between tasks without crashing the ESP32.
-- **Dual-Core Support**: it allows you to run your tasks on either core 0 or core 1 of the ESP32.
+- **Task Management**: Create, suspend, resume, or delete tasks (covered in this tutorial).
+- **Scheduling**: Allows you to give priority to your tasks, so they run in a specific order (covered in this tutorial).
+- **Inter-Task Communication**: Using things like queues, semaphores, and mutexes, we can ensure seamless communication between tasks without crashing the ESP32.
+- **Dual-Core Support**: It allows you to run your tasks on either core 0 or core 1 of the ESP32.
 
 ### Basic concepts
 
-- **Tasks**: tasks are independent functions running concurrently, each with its own stack (memory usage allocated) and priority. Tasks can be in states like Running, Ready, Blocked, or Suspended.
-- **Scheduler**: the scheduler decides which tasks to run based on their priorities. This is a preemptive scheduler, which means it can interrupt a lower-priority task at any time to run a higher-priority one, ensuring that critical tasks are executed as soon as they’re ready.
-- **Priorities**: higher numbers indicate higher priority (for example: 1 = low, 5 = high).
+- **Tasks**: Tasks are independent functions running concurrently, each with its own stack (memory usage allocated) and priority. Tasks can be in states like Running, Ready, Blocked, or Suspended.
+- **Scheduler**: The scheduler decides which tasks to run based on their priorities. This is a preemptive scheduler, which means it can interrupt a lower-priority task at any time to run a higher-priority one, ensuring that critical tasks are executed as soon as they’re ready.
+- **Priorities**: Higher numbers indicate higher priority (for example: 1 = low, 5 = high).
 
 ### FreeRTOS example # 1
 
@@ -271,8 +276,10 @@ This example uses 2 leds to blink them at different rates. **How would you do th
 // Declare task handle
 TaskHandle_t BlinkTaskHandle = NULL;
 
-void BlinkTask(void *parameter) {
-  for (;;) { // Infinite loop
+void BlinkTask(void *parameter)
+{
+  for (;;)
+  { // Infinite loop
     digitalWrite(LED_PIN, HIGH);
     Serial.println("BlinkTask: LED ON");
     vTaskDelay(1000 / portTICK_PERIOD_MS); // 1000ms
@@ -344,8 +351,15 @@ void IRAM_ATTR buttonISR() {
   }
 }
 
-void BlinkTask(void *parameter) {
-  for (;;) { // Infinite loop
+void BlinkTask(void *parameter)
+{
+   // Initialize pins
+  pinMode(LED1_PIN, OUTPUT);
+  pinMode(BUTTON_PIN, INPUT_PULLUP); // Internal pull-up resistor
+  // Attach interrupt to button
+  attachInterrupt(digitalPinToInterrupt(BUTTON_PIN), buttonISR, FALLING);
+  for (;;) // Infinite loop
+  {
     digitalWrite(LED1_PIN, HIGH);
     Serial.println("BlinkTask: LED ON");
     vTaskDelay(1000 / portTICK_PERIOD_MS); // 1000ms
@@ -357,17 +371,9 @@ void BlinkTask(void *parameter) {
   }
 }
 
-void setup() {
+void setup()
+{
   Serial.begin(115200);
-
-
-  // Initialize pins
-  pinMode(LED1_PIN, OUTPUT);
-  pinMode(BUTTON_PIN, INPUT_PULLUP); // Internal pull-up resistor
-
-  // Attach interrupt to button
-  attachInterrupt(digitalPinToInterrupt(BUTTON_PIN), buttonISR, FALLING);
-
   // Create task
   xTaskCreatePinnedToCore(
     BlinkTask,         // Task function
@@ -380,7 +386,8 @@ void setup() {
   );
 }
 
-void loop() {
+void loop()
+{
   // Empty because FreeRTOS scheduler runs the task
 }
 ```
