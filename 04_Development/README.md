@@ -399,6 +399,12 @@ void loop()
 }
 ```
 
+### Multitasking
+
+Multitasking refers to the capacity of the MCU to attend different applications "at the same time", as we usually do in when we use a computer.
+
+A FreeRTOS task is contained inside a function thta has a *setup()* and *loop()* stages. FreeRTOS mission is to execute all tasks in a way they allow the execution of other tasks.
+
 ### FRTOS example # 3
 
 ```cpp
@@ -467,7 +473,7 @@ void loop()
 
 ### FreeRTOS example # 4
 
-The following code manages 2 LEDs at different speeds.
+The following code manages 2 LEDs at different speeds, printing data related to stack status.
 
 ```cpp
 #include <Arduino.h>
@@ -532,12 +538,6 @@ void loop()
   }
 }
 ```
-
-### Multitasking
-
-Multitasking refers to the capacity of the MCU to attend different applications "at the same time", as we usually do in when we use a computer.
-
-A FreeRTOS task is contained inside a function thta has a *setup()* and *loop()* stages. FreeRTOS mission is to execute all tasks in a way they allow the execution of other tasks.
 
 ## References
 
