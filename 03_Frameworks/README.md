@@ -596,7 +596,8 @@ The schematic is shown below:
 Perform the following tasks:
 1. Create the assembly in Fritzing and save it as **sounds.fzz**. Then, generate the images associated with the schematic and the assembly.
 2. The program downloaded to the Arduino UNO is shown below:
-   ```c++
+
+   ```cpp
    const int sw1pin = 6;
    const int sw2pin = 7;
    const int soundPin = 8;
