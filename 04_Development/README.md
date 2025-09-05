@@ -123,7 +123,7 @@ void fsm_process()
 ```
 ### Example # 2
 
-Let's read a DTH11 sensor, available in the kit provided in the laboratory. Lets implement this FSM (**remember to include DHT11 library, as we saw in the last session**):
+Let's read a DHT11 sensor, available in the kit provided in the laboratory. Lets implement this FSM (**remember to include DHT11 library, as we saw in the last session**):
 
 ![fsm_dht11](img/fsm_dht11.png)
 
@@ -243,11 +243,11 @@ void fsm_process()
 ## Embedded Operating System
 
 An *Embedded Operating System (EOS)* is a piece of firmware useful to manage multiple tasks inside a microcontroller. Some of the most used EOS's are: 
-- [Embedded linux](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwja64uPocKPAxWeSzABHRCOG-sQFnoECAwQAQ&url=https%3A%2F%2Fwww.arm.com%2Fresources%2Feducation%2Fonline-courses%2Fembedded-linux&usg=AOvVaw0o9L11pSUVm5cFFEAZZ3ng&opi=89978449)
-- [TinyOS](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwjNjt3uoMKPAxWTSjABHTarLvAQFnoECCgQAQ&url=https%3A%2F%2Fgithub.com%2Ftinyos&usg=AOvVaw28C92S_yasJxnNMxhHUjJM&opi=89978449)
-- [ThreadX](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwivrZHfoMKPAxVYSjABHSCRATwQFnoECDYQAQ&url=https%3A%2F%2Fgithub.com%2Feclipse-threadx%2Fthreadx&usg=AOvVaw2Lk97SKKqllfcy7OvC0wMy&opi=89978449)
-- [mbedOS](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwj3hd-moMKPAxX2SjABHQkOBLcQFnoECA4QAQ&url=https%3A%2F%2Fos.mbed.com%2Fmbed-os%2F&usg=AOvVaw0n_npwa0c01oi9DZD7Le_-&opi=89978449)
-- [Free Real-Time OS](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwivqaaiocKPAxULSTABHbmLM9wQFnoECBYQAQ&url=https%3A%2F%2Fwww.freertos.org%2F&usg=AOvVaw1rceblHUTFrkSo3at3b_bR&opi=89978449)
+- [Embedded linux](https://www.arm.com/resources/education/online-courses/embedded-linux).
+- [TinyOS](https://github.com/tinyos).
+- [ThreadX](https://threadx.io).
+- [mbedOS](https://os.mbed.com/mbed-os).
+- [Free Real-Time OS](https://www.freertos.org).
 
 We are going to explore a little bit of FreeRTOS, because is free, open and has been ported to a lot of plattforms (ESP32 included).
 
@@ -338,7 +338,8 @@ volatile bool taskSuspended = false;
 volatile uint32_t lastInterruptTime = 0;
 const uint32_t debounceDelay = 100; // debounce period
 
-void IRAM_ATTR buttonISR() {
+void IRAM_ATTR buttonISR()
+{
   // Debounce
   uint32_t currentTime = millis();
   if (currentTime - lastInterruptTime < debounceDelay) {
@@ -395,6 +396,140 @@ void setup()
 void loop()
 {
   // Empty because FreeRTOS scheduler runs the task
+}
+```
+
+### FRTOS example # 3
+
+```cpp
+#include <Arduino.h>
+
+#define LED1_PIN 2
+#define LED2_PIN 4
+
+#define RTOS_delay(x) vTaskDelay(x / portTICK_PERIOD_MS)
+
+TaskHandle_t Task1Handle = NULL;
+TaskHandle_t Task2Handle = NULL;
+
+void Task1(void *parameter)
+{
+  pinMode(LED1_PIN, OUTPUT);
+  for (;;) {
+    digitalWrite(LED1_PIN, HIGH);
+    Serial.println("Task1: LED1 ON");
+    RTOS_delay(1000);
+    digitalWrite(LED1_PIN, LOW);
+    Serial.println("Task1: LED1 OFF");
+    RTOS_delay(1000);
+    Serial.print("Task 1 running on core ");
+    Serial.println(xPortGetCoreID());
+  }
+}
+
+void Task2(void *parameter)
+{
+  pinMode(LED2_PIN, OUTPUT);
+  for (;;) {
+    digitalWrite(LED2_PIN, HIGH);
+    Serial.println("Task2: LED2 ON");
+    RTOS_delay(333);
+    digitalWrite(LED2_PIN, LOW);
+    Serial.println("Task2: LED2 OFF");
+    RTOS_delay(333);
+    Serial.print("Task 2 running on core ");
+    Serial.println(xPortGetCoreID());
+  }
+}
+
+void setup()
+{
+  Serial.begin(115200);
+  xTaskCreatePinnedToCore(
+    Task1,             // Task function
+    "Task1",           // Task name
+    10000,             // Stack size (bytes)
+    NULL,              // Parameters
+    1,                 // Priority
+    &Task1Handle,      // Task handle
+    1                  // Core 1
+  );
+  xTaskCreatePinnedToCore(
+    Task2, "Task2", 10000, NULL, 1, &Task2Handle, 0
+  );
+}
+
+void loop()
+{
+  // Empty because FreeRTOS scheduler runs the task
+}
+```
+
+### FreeRTOS example # 4
+
+The following code manages 2 LEDs at different speeds.
+
+```cpp
+#include <Arduino.h>
+
+#define LED1_PIN 2
+#define LED2_PIN 4
+
+#define RTOS_delay(x) vTaskDelay(x / portTICK_PERIOD_MS)
+
+TaskHandle_t Task1Handle = NULL;
+TaskHandle_t Task2Handle = NULL;
+
+void Task1(void *parameter)
+{
+  pinMode(LED1_PIN, OUTPUT);
+  for (;;) {
+    digitalWrite(LED1_PIN, HIGH);
+    Serial.println("Task1: LED1 ON");
+    RTOS_delay(1000);
+    digitalWrite(LED1_PIN, LOW);
+    Serial.println("Task1: LED1 OFF");
+    RTOS_delay(1000);
+    Serial.printf("Task1 Stack Free: %u bytes\n", uxTaskGetStackHighWaterMark(NULL));
+  }
+}
+
+void Task2(void *parameter)
+{
+  pinMode(LED2_PIN, OUTPUT);
+  for (;;) {
+    digitalWrite(LED2_PIN, HIGH);
+    Serial.println("Task2: LED2 ON");
+    RTOS_delay(333);
+    digitalWrite(LED2_PIN, LOW);
+    Serial.println("Task2: LED2 OFF");
+    RTOS_delay(333);
+    Serial.printf("Task2 Stack Free: %u bytes\n", uxTaskGetStackHighWaterMark(NULL));
+  }
+}
+
+void setup()
+{
+  Serial.begin(115200);
+  delay(1000);
+  Serial.printf("Starting FreeRTOS: Memory Usage\nInitial Free Heap: %u bytes\n", xPortGetFreeHeapSize());
+
+  xTaskCreatePinnedToCore(
+    Task1, "Task1", 10000, NULL, 1, &Task1Handle, 1
+  );
+
+  xTaskCreatePinnedToCore(
+    Task2, "Task2", 10000, NULL, 1, &Task2Handle, 1
+  );
+}
+
+void loop()
+{
+  static uint32_t lastCheck = 0;
+  if (millis() - lastCheck > 5000) {
+    Serial.printf("Free Heap: %u bytes\n", xPortGetFreeHeapSize());
+    lastCheck = millis();
+  }
 }
 ```
 
