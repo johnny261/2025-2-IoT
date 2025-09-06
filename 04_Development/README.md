@@ -366,13 +366,13 @@ void BlinkTask(void *parameter)
   attachInterrupt(digitalPinToInterrupt(BUTTON_PIN), buttonISR, FALLING);
   for (;;) // Infinite loop
   {
+    Serial.print("BlinkTask running on core ");
+    Serial.println(xPortGetCoreID());
     digitalWrite(LED1_PIN, HIGH);
     Serial.println("BlinkTask: LED ON");
     RTOS_delay(1000);
     digitalWrite(LED1_PIN, LOW);
     Serial.println("BlinkTask: LED OFF");
-    Serial.print("BlinkTask running on core ");
-    Serial.println(xPortGetCoreID());
     RTOS_delay(1000);
   }
 }
