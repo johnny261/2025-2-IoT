@@ -281,6 +281,7 @@ TaskHandle_t BlinkTaskHandle = NULL;
 
 void BlinkTask(void *parameter)
 {
+  pinMode(LED_PIN, OUTPUT);
   for (;;) // Infinite loop
   {
     digitalWrite(LED_PIN, HIGH);
@@ -296,8 +297,6 @@ void BlinkTask(void *parameter)
 
 void setup() {
   Serial.begin(115200);
-  
-  pinMode(LED_PIN, OUTPUT);
 
   xTaskCreatePinnedToCore(
     BlinkTask,         // Task function
